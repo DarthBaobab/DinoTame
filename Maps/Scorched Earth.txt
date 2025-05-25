@@ -1,0 +1,68 @@
+Achatina
+Ankylosaurus
+Araneo
+Archaeopteryx
+Argentavis
+Arthropluera
+Carnotaurus
+Ceratosaurus
+Coelacanth
+Daeodon
+Deathworm
+Deinosuchus
+Direwolf
+Doedicurus
+Dreadmare
+Dung Beetle
+Electrophorus
+Equus
+Fasolasuchus
+Fire Wyvern
+Gallimimus
+Giant Queen Bee
+Hyaenodon
+Iguanodon
+Jerboa
+Kaprosuchus
+Kentrosaurus
+Lightning Wyvern
+Lymantria
+Lystrosaurus
+Mantis
+Megalania
+Megalosaurus
+Megatherium
+Microraptor
+Morellatops
+Moschops
+Oasisaur
+Oil Jug Bug
+Onyc
+Ovis
+Paraceratherium
+Parasaur
+Pegomastax
+Phoenix
+Piranha
+Poison Wyvern
+Procoptodon
+Pulmonoscorpius
+Purlovia
+Pyromane
+Raptor
+Rex
+Rock Elemental
+Rubble Golem
+Sabertooth
+Tapejara
+Terror Bird
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanomyrma Soldier
+Titanosaur
+Troodon
+Vulture
+Water Jug Bug
+Yutyrannus
