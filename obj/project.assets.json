@@ -1181,11 +1181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rumsp\\Documents\\GitHub\\CatchDinos\\Catch Dinos.csproj",
-      "projectName": "Catch Dinos",
-      "projectPath": "C:\\Users\\rumsp\\Documents\\GitHub\\CatchDinos\\Catch Dinos.csproj",
+      "projectUniqueName": "C:\\Users\\rumsp\\Documents\\GitHub\\DinoTame\\DinoTame.csproj",
+      "projectName": "DinoTame",
+      "projectPath": "C:\\Users\\rumsp\\Documents\\GitHub\\DinoTame\\DinoTame.csproj",
       "packagesPath": "C:\\Users\\rumsp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rumsp\\Documents\\GitHub\\CatchDinos\\obj\\",
+      "outputPath": "C:\\Users\\rumsp\\Documents\\GitHub\\DinoTame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rumsp\\AppData\\Roaming\\NuGet\\NuGet.Config"

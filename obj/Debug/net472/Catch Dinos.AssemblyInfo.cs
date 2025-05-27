@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Catch Dinos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b5652ab7aad3a3bc7a6779f851820de8c2a7800")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad2cdf8a1e09da1fea82393947503a1b1931138e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Catch Dinos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Catch Dinos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

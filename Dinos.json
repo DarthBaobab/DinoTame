@@ -2,7 +2,7 @@
   {
     "name": "Achatina",
     "spawn_chance": 8,
-    "catch_chance": 32,
+    "tame_chance": 32,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -10,56 +10,62 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Achatina.png"
   },
   {
     "name": "Allosaurus",
     "spawn_chance": 5,
-    "catch_chance": 29,
+    "tame_chance": 29,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Allosaurus.png"
   },
   {
     "name": "Amargasaurus",
     "spawn_chance": 7,
-    "catch_chance": 45,
-    "maps": []
+    "tame_chance": 45,
+    "maps": [],
+    "icon": "Amargasaurus.png"
   },
   {
     "name": "Ammonite",
     "spawn_chance": 5,
-    "catch_chance": 44,
+    "tame_chance": 44,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ammonite.png"
   },
   {
     "name": "Andrewsarchus",
     "spawn_chance": 10,
-    "catch_chance": 32,
-    "maps": []
+    "tame_chance": 32,
+    "maps": [],
+    "icon": "Andrewsarchus.png"
   },
   {
     "name": "Anglerfish",
     "spawn_chance": 9,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Anglerfish.png"
   },
   {
     "name": "Ankylosaurus",
     "spawn_chance": 5,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -67,12 +73,13 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ankylosaurus.png"
   },
   {
     "name": "Araneo",
     "spawn_chance": 4,
-    "catch_chance": 23,
+    "tame_chance": 23,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -80,53 +87,58 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Araneo.png"
   },
   {
     "name": "Archaeopteryx",
     "spawn_chance": 6,
-    "catch_chance": 23,
+    "tame_chance": 23,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction"
-    ]
+    ],
+    "icon": "Archaeopteryx.png"
   },
   {
     "name": "Archelon",
     "spawn_chance": 12,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Archelon.png"
   },
   {
     "name": "Argentavis",
     "spawn_chance": 7,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Argentavis.png"
   },
   {
     "name": "Armadoggo",
     "spawn_chance": 6,
-    "catch_chance": 31,
+    "tame_chance": 31,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Armadoggo.png"
   },
   {
     "name": "Arthropluera",
     "spawn_chance": 4,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -134,129 +146,143 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Arthropluera.png"
   },
   {
     "name": "Astrocetus",
     "spawn_chance": 2,
-    "catch_chance": 20,
-    "maps": []
+    "tame_chance": 20,
+    "maps": [],
+    "icon": "Astrocetus.png"
   },
   {
     "name": "Astrodelphis",
     "spawn_chance": 4,
-    "catch_chance": 42,
-    "maps": []
+    "tame_chance": 42,
+    "maps": [],
+    "icon": "Astrodelphis.png"
   },
   {
     "name": "Baryonyx",
     "spawn_chance": 11,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Baryonyx.png"
   },
   {
     "name": "Basilisk",
     "spawn_chance": 5,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Basilisk.png"
   },
   {
     "name": "Basilosaurus",
     "spawn_chance": 7,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Basilosaurus.png"
   },
   {
     "name": "Beelzebufo",
     "spawn_chance": 12,
-    "catch_chance": 48,
+    "tame_chance": 48,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Beelzebufo.png"
   },
   {
     "name": "Bison",
     "spawn_chance": 8,
-    "catch_chance": 36,
-    "maps": []
+    "tame_chance": 36,
+    "maps": [],
+    "icon": null
   },
   {
     "name": "Bloodstalker",
     "spawn_chance": 7,
-    "catch_chance": 31,
-    "maps": []
+    "tame_chance": 31,
+    "maps": [],
+    "icon": "Bloodstalker.png"
   },
   {
     "name": "Brontosaurus",
     "spawn_chance": 10,
-    "catch_chance": 49,
+    "tame_chance": 49,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Brontosaurus.png"
   },
   {
     "name": "Broodmother Lysrix",
     "spawn_chance": 4,
-    "catch_chance": 37,
+    "tame_chance": 37,
     "maps": [
       "The Island",
       "The Center"
-    ]
+    ],
+    "icon": "Broodmother Lysrix.png"
   },
   {
     "name": "Bulbdog",
     "spawn_chance": 9,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Bulbdog.png"
   },
   {
     "name": "Carbonemys",
     "spawn_chance": 9,
-    "catch_chance": 49,
+    "tame_chance": 49,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Carbonemys.png"
   },
   {
     "name": "Carcharodontosaurus",
     "spawn_chance": 10,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Carcharodontosaurus.png"
   },
   {
     "name": "Carnotaurus",
     "spawn_chance": 8,
-    "catch_chance": 29,
+    "tame_chance": 29,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -264,251 +290,275 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Carnotaurus.png"
   },
   {
     "name": "Castoroides",
     "spawn_chance": 8,
-    "catch_chance": 26,
+    "tame_chance": 26,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Castoroides.png"
   },
   {
     "name": "Cat",
     "spawn_chance": 9,
-    "catch_chance": 25,
+    "tame_chance": 25,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": null
   },
   {
     "name": "Ceratosaurus",
     "spawn_chance": 10,
-    "catch_chance": 26,
+    "tame_chance": 26,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ceratosaurus.png"
   },
   {
     "name": "Chalicotherium",
     "spawn_chance": 4,
-    "catch_chance": 37,
+    "tame_chance": 37,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Chalicotherium.png"
   },
   {
     "name": "Cnidaria",
     "spawn_chance": 6,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Cnidaria.png"
   },
   {
     "name": "Compy",
     "spawn_chance": 10,
-    "catch_chance": 42,
+    "tame_chance": 42,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Compy.png"
   },
   {
     "name": "Cosmo",
     "spawn_chance": 5,
-    "catch_chance": 45,
+    "tame_chance": 45,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Cosmo.png"
   },
   {
     "name": "Crystal Wyvern",
     "spawn_chance": 2,
-    "catch_chance": 10,
-    "maps": []
+    "tame_chance": 10,
+    "maps": [],
+    "icon": "Crystal Wyvern.png"
   },
   {
     "name": "Daeodon",
     "spawn_chance": 6,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Daeodon.png"
   },
   {
     "name": "Deathworm",
     "spawn_chance": 8,
-    "catch_chance": 24,
+    "tame_chance": 24,
     "maps": [
       "Scorched Earth"
-    ]
+    ],
+    "icon": "Deathworm.png"
   },
   {
     "name": "Deinonychus",
     "spawn_chance": 8,
-    "catch_chance": 46,
-    "maps": []
+    "tame_chance": 46,
+    "maps": [],
+    "icon": "Deinonychus.png"
   },
   {
     "name": "Deinosuchus",
     "spawn_chance": 6,
-    "catch_chance": 40,
+    "tame_chance": 40,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Deinosuchus.png"
   },
   {
     "name": "Deinotherium",
     "spawn_chance": 10,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Island",
       "The Center",
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": null
   },
   {
     "name": "Desert Titan",
     "spawn_chance": 1,
-    "catch_chance": 10,
+    "tame_chance": 10,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Desert Titan.png"
   },
   {
     "name": "Desmodus",
     "spawn_chance": 9,
-    "catch_chance": 43,
-    "maps": []
+    "tame_chance": 43,
+    "maps": [],
+    "icon": "Desmodus.png"
   },
   {
     "name": "Dilophosaur",
     "spawn_chance": 8,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dilophosaur.png"
   },
   {
     "name": "Dimetrodon",
     "spawn_chance": 12,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dimetrodon.png"
   },
   {
     "name": "Dimorphodon",
     "spawn_chance": 7,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dimorphodon.png"
   },
   {
     "name": "Diplocaulus",
     "spawn_chance": 5,
-    "catch_chance": 45,
+    "tame_chance": 45,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Diplocaulus.png"
   },
   {
     "name": "Diplodocus",
     "spawn_chance": 4,
-    "catch_chance": 32,
+    "tame_chance": 32,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Diplodocus.png"
   },
   {
     "name": "Dire Bear",
     "spawn_chance": 10,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dire Bear.png"
   },
   {
     "name": "Direwolf",
     "spawn_chance": 6,
-    "catch_chance": 32,
+    "tame_chance": 32,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Direwolf.png"
   },
   {
     "name": "Dodo",
     "spawn_chance": 15,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dodo.png"
   },
   {
     "name": "Doedicurus",
     "spawn_chance": 9,
-    "catch_chance": 39,
+    "tame_chance": 39,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -516,40 +566,44 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Doedicurus.png"
   },
   {
     "name": "Dragon",
     "spawn_chance": 3,
-    "catch_chance": 9,
+    "tame_chance": 9,
     "maps": [
       "The Island"
-    ]
+    ],
+    "icon": "Dragon.png"
   },
   {
     "name": "Dreadmare",
     "spawn_chance": 10,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dreadmare.png"
   },
   {
     "name": "Dreadnoughtus",
     "spawn_chance": 4,
-    "catch_chance": 21,
+    "tame_chance": 21,
     "maps": [
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dreadnoughtus.png"
   },
   {
     "name": "Dung Beetle",
     "spawn_chance": 7,
-    "catch_chance": 50,
+    "tame_chance": 50,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -557,34 +611,37 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dung Beetle.png"
   },
   {
     "name": "Dunkleosteus",
     "spawn_chance": 4,
-    "catch_chance": 27,
+    "tame_chance": 27,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Dunkleosteus.png"
   },
   {
     "name": "Electrophorus",
     "spawn_chance": 4,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Electrophorus.png"
   },
   {
     "name": "Equus",
     "spawn_chance": 5,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -592,95 +649,106 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Equus.png"
   },
   {
     "name": "Eurypterid",
     "spawn_chance": 5,
-    "catch_chance": 40,
+    "tame_chance": 40,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Eurypterid.png"
   },
   {
     "name": "Fasolasuchus",
     "spawn_chance": 6,
-    "catch_chance": 24,
+    "tame_chance": 24,
     "maps": [
       "Scorched Earth",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Fasolasuchus.png"
   },
   {
     "name": "Featherlight",
     "spawn_chance": 6,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Featherlight.png"
   },
   {
     "name": "Fenrir",
     "spawn_chance": 10,
-    "catch_chance": 21,
-    "maps": []
+    "tame_chance": 21,
+    "maps": [],
+    "icon": "Fenrir.png"
   },
   {
     "name": "Ferox",
     "spawn_chance": 5,
-    "catch_chance": 38,
-    "maps": []
+    "tame_chance": 38,
+    "maps": [],
+    "icon": "Ferox.png"
   },
   {
     "name": "Fjordhawk",
     "spawn_chance": 10,
-    "catch_chance": 40,
-    "maps": []
+    "tame_chance": 40,
+    "maps": [],
+    "icon": "Fjordhawk.png"
   },
   {
     "name": "Forest Titan",
     "spawn_chance": 1,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Forest Titan.png"
   },
   {
     "name": "Gacha",
     "spawn_chance": 9,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Gacha.png"
   },
   {
     "name": "Gallimimus",
     "spawn_chance": 10,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Gallimimus.png"
   },
   {
     "name": "Gasbags",
     "spawn_chance": 4,
-    "catch_chance": 21,
+    "tame_chance": 21,
     "maps": [
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Gasbags.png"
   },
   {
     "name": "Giant Bee",
     "spawn_chance": 5,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
@@ -688,112 +756,123 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Giant Bee.png"
   },
   {
     "name": "Giganotosaurus",
     "spawn_chance": 1,
-    "catch_chance": 18,
+    "tame_chance": 18,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Giganotosaurus.png"
   },
   {
     "name": "Gigantopithecus",
     "spawn_chance": 1,
-    "catch_chance": 5,
+    "tame_chance": 5,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Gigantopithecus.png"
   },
   {
     "name": "Gigantoraptor",
     "spawn_chance": 1,
-    "catch_chance": 5,
+    "tame_chance": 5,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Gigantoraptor.png"
   },
   {
     "name": "Glowtail",
     "spawn_chance": 9,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Glowtail.png"
   },
   {
     "name": "Griffin",
     "spawn_chance": 5,
-    "catch_chance": 42,
-    "maps": []
+    "tame_chance": 42,
+    "maps": [],
+    "icon": "Griffin.png"
   },
   {
     "name": "Hesperornis",
     "spawn_chance": 5,
-    "catch_chance": 44,
+    "tame_chance": 44,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Hesperornis.png"
   },
   {
     "name": "Hyaenodon",
     "spawn_chance": 12,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Hyaenodon.png"
   },
   {
     "name": "Ice Titan",
     "spawn_chance": 1,
-    "catch_chance": 5,
+    "tame_chance": 5,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Ice Titan.png"
   },
   {
     "name": "Ichthyornis",
     "spawn_chance": 5,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ichthyornis.png"
   },
   {
     "name": "Ichthyosaurus",
     "spawn_chance": 6,
-    "catch_chance": 26,
+    "tame_chance": 26,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ichthyosaurus.png"
   },
   {
     "name": "Iguanodon",
     "spawn_chance": 5,
-    "catch_chance": 50,
+    "tame_chance": 50,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -801,102 +880,112 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Iguanodon.png"
   },
   {
     "name": "Jerboa",
     "spawn_chance": 12,
-    "catch_chance": 47,
+    "tame_chance": 47,
     "maps": [
       "Scorched Earth"
-    ]
+    ],
+    "icon": "Jerboa.png"
   },
   {
     "name": "Kairuku",
     "spawn_chance": 8,
-    "catch_chance": 27,
+    "tame_chance": 27,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Kairuku.png"
   },
   {
     "name": "Kaprosuchus",
     "spawn_chance": 4,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Kaprosuchus.png"
   },
   {
     "name": "Karkinos",
     "spawn_chance": 6,
-    "catch_chance": 35,
+    "tame_chance": 35,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Karkinos.png"
   },
   {
     "name": "Kentrosaurus",
     "spawn_chance": 7,
-    "catch_chance": 27,
+    "tame_chance": 27,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Kentrosaurus.png"
   },
   {
     "name": "King Titan",
     "spawn_chance": 3,
-    "catch_chance": 16,
+    "tame_chance": 16,
     "maps": [
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "King Titan.png"
   },
   {
     "name": "Leedsichthys",
     "spawn_chance": 9,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Leedsichthys.png"
   },
   {
     "name": "Liopleurodon",
     "spawn_chance": 8,
-    "catch_chance": 45,
+    "tame_chance": 45,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Liopleurodon.png"
   },
   {
     "name": "Lymantria",
     "spawn_chance": 5,
-    "catch_chance": 31,
+    "tame_chance": 31,
     "maps": [
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Lymantria.png"
   },
   {
     "name": "Lystrosaurus",
     "spawn_chance": 15,
-    "catch_chance": 50,
+    "tame_chance": 50,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -904,78 +993,87 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Lystrosaurus.png"
   },
   {
     "name": "Maewing",
     "spawn_chance": 7,
-    "catch_chance": 37,
-    "maps": []
+    "tame_chance": 37,
+    "maps": [],
+    "icon": "Maewing.png"
   },
   {
     "name": "Magmasaur",
     "spawn_chance": 9,
-    "catch_chance": 44,
-    "maps": []
+    "tame_chance": 44,
+    "maps": [],
+    "icon": "Magmasaur.png"
   },
   {
     "name": "Mammoth",
     "spawn_chance": 5,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Mammoth.png"
   },
   {
     "name": "Managarmr",
     "spawn_chance": 6,
-    "catch_chance": 40,
+    "tame_chance": 40,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Managarmr.png"
   },
   {
     "name": "Manta",
     "spawn_chance": 9,
-    "catch_chance": 24,
+    "tame_chance": 24,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Manta.png"
   },
   {
     "name": "Manticore",
     "spawn_chance": 3,
-    "catch_chance": 19,
+    "tame_chance": 19,
     "maps": [
       "Scorched Earth"
-    ]
+    ],
+    "icon": "Manticore.png"
   },
   {
     "name": "Mantis",
     "spawn_chance": 4,
-    "catch_chance": 27,
+    "tame_chance": 27,
     "maps": [
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Mantis.png"
   },
   {
     "name": "Megachelon",
     "spawn_chance": 5,
-    "catch_chance": 36,
-    "maps": []
+    "tame_chance": 36,
+    "maps": [],
+    "icon": "Megachelon.png"
   },
   {
     "name": "Megalania",
     "spawn_chance": 10,
-    "catch_chance": 42,
+    "tame_chance": 42,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -983,33 +1081,36 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Megalania.png"
   },
   {
     "name": "Megaloceros",
     "spawn_chance": 5,
-    "catch_chance": 32,
+    "tame_chance": 32,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Megaloceros.png"
   },
   {
     "name": "Megalodon",
     "spawn_chance": 11,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Megalodon.png"
   },
   {
     "name": "Megalosaurus",
     "spawn_chance": 10,
-    "catch_chance": 29,
+    "tame_chance": 29,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1017,94 +1118,103 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Megalosaurus.png"
   },
   {
     "name": "Meganeura",
     "spawn_chance": 6,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Meganeura.png"
   },
   {
     "name": "Megapithecus",
     "spawn_chance": 6,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Island",
       "The Center"
-    ]
+    ],
+    "icon": "Megapithecus.png"
   },
   {
     "name": "Megaraptor",
     "spawn_chance": 11,
-    "catch_chance": 60,
-    "maps": []
+    "tame_chance": 60,
+    "maps": [],
+    "icon": null
   },
   {
     "name": "Megatherium",
     "spawn_chance": 5,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Megatherium.png"
   },
   {
     "name": "Mesopithecus",
     "spawn_chance": 9,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Mesopithecus.png"
   },
   {
     "name": "Microraptor",
     "spawn_chance": 15,
-    "catch_chance": 60,
+    "tame_chance": 60,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Microraptor.png"
   },
   {
     "name": "Morellatops",
     "spawn_chance": 10,
-    "catch_chance": 25,
+    "tame_chance": 25,
     "maps": [
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Morellatops.png"
   },
   {
     "name": "Mosasaurus",
     "spawn_chance": 9,
-    "catch_chance": 24,
+    "tame_chance": 24,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Mosasaurus.png"
   },
   {
     "name": "Moschops",
     "spawn_chance": 4,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1112,78 +1222,86 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Moschops.png"
   },
   {
     "name": "Nameless",
     "spawn_chance": 8,
-    "catch_chance": 44,
+    "tame_chance": 44,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Nameless.png"
   },
   {
     "name": "Noglin",
     "spawn_chance": 4,
-    "catch_chance": 31,
-    "maps": []
+    "tame_chance": 31,
+    "maps": [],
+    "icon": "Noglin.png"
   },
   {
     "name": "Oasisaur",
     "spawn_chance": 8,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "Scorched Earth"
-    ]
+    ],
+    "icon": "Oasisaur.png"
   },
   {
     "name": "Onyc",
     "spawn_chance": 5,
-    "catch_chance": 45,
+    "tame_chance": 45,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Onyc.png"
   },
   {
     "name": "Otter",
     "spawn_chance": 9,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Otter.png"
   },
   {
     "name": "Overseer",
     "spawn_chance": 2,
-    "catch_chance": 7,
+    "tame_chance": 7,
     "maps": [
       "The Island"
-    ]
+    ],
+    "icon": "Overseer.png"
   },
   {
     "name": "Oviraptor",
     "spawn_chance": 11,
-    "catch_chance": 47,
+    "tame_chance": 47,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Oviraptor.png"
   },
   {
     "name": "Ovis",
     "spawn_chance": 5,
-    "catch_chance": 27,
+    "tame_chance": 27,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1191,23 +1309,25 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Ovis.png"
   },
   {
     "name": "Pachy",
     "spawn_chance": 7,
-    "catch_chance": 35,
+    "tame_chance": 35,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pachy.png"
   },
   {
     "name": "Paraceratherium",
     "spawn_chance": 7,
-    "catch_chance": 39,
+    "tame_chance": 39,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1215,12 +1335,13 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Paraceratherium.png"
   },
   {
     "name": "Parasaur",
     "spawn_chance": 11,
-    "catch_chance": 46,
+    "tame_chance": 46,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1228,53 +1349,58 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Parasaur.png"
   },
   {
     "name": "Pegomastax",
     "spawn_chance": 5,
-    "catch_chance": 26,
+    "tame_chance": 26,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pegomastax.png"
   },
   {
     "name": "Pelagornis",
     "spawn_chance": 9,
-    "catch_chance": 25,
+    "tame_chance": 25,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pelagornis.png"
   },
   {
     "name": "Phiomia",
     "spawn_chance": 10,
-    "catch_chance": 44,
+    "tame_chance": 44,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Phiomia.png"
   },
   {
     "name": "Phoenix",
     "spawn_chance": 5,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "Scorched Earth"
-    ]
+    ],
+    "icon": "Phoenix.png"
   },
   {
     "name": "Piranha",
     "spawn_chance": 9,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1282,45 +1408,49 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Piranha.png"
   },
   {
     "name": "Plesiosaur",
     "spawn_chance": 8,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Plesiosaur.png"
   },
   {
     "name": "Procoptodon",
     "spawn_chance": 12,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Procoptodon.png"
   },
   {
     "name": "Pteranodon",
     "spawn_chance": 9,
-    "catch_chance": 47,
+    "tame_chance": 47,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pteranodon.png"
   },
   {
     "name": "Pulmonoscorpius",
     "spawn_chance": 12,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1328,12 +1458,13 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pulmonoscorpius.png"
   },
   {
     "name": "Purlovia",
     "spawn_chance": 8,
-    "catch_chance": 39,
+    "tame_chance": 39,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1341,34 +1472,37 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Purlovia.png"
   },
   {
     "name": "Pyromane",
     "spawn_chance": 9,
-    "catch_chance": 34,
+    "tame_chance": 34,
     "maps": [
       "Scorched Earth",
       "The Center",
       "Aberration",
       "Astraeos"
-    ]
+    ],
+    "icon": "Pyromane.png"
   },
   {
     "name": "Quetzal",
     "spawn_chance": 4,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Quetzal.png"
   },
   {
     "name": "Raptor",
     "spawn_chance": 14,
-    "catch_chance": 45,
+    "tame_chance": 45,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1376,237 +1510,262 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Raptor.png"
   },
   {
     "name": "Ravager",
     "spawn_chance": 8,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Ravager.png"
   },
   {
     "name": "Reaper",
     "spawn_chance": 2,
-    "catch_chance": 7,
+    "tame_chance": 7,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Reaper.png"
   },
   {
     "name": "Rex",
     "spawn_chance": 2,
-    "catch_chance": 7,
+    "tame_chance": 7,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Rex.png"
   },
   {
     "name": "Rhyniognatha",
     "spawn_chance": 9,
-    "catch_chance": 31,
+    "tame_chance": 31,
     "maps": [
       "The Island",
       "Astraeos"
-    ]
+    ],
+    "icon": "Rhyniognatha.png"
   },
   {
     "name": "Rock Drake",
     "spawn_chance": 10,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Rock Drake.png"
   },
   {
     "name": "Rock Elemental",
     "spawn_chance": 8,
-    "catch_chance": 25,
+    "tame_chance": 25,
     "maps": [
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Rock Elemental.png"
   },
   {
     "name": "Rockwell",
     "spawn_chance": 3,
-    "catch_chance": 9,
+    "tame_chance": 9,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Rockwell.png"
   },
   {
     "name": "Roll Rat",
     "spawn_chance": 6,
-    "catch_chance": 33,
+    "tame_chance": 33,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Roll Rat.png"
   },
   {
     "name": "Sabertooth",
     "spawn_chance": 7,
-    "catch_chance": 42,
+    "tame_chance": 42,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Sabertooth.png"
   },
   {
     "name": "Sarco",
     "spawn_chance": 9,
-    "catch_chance": 28,
+    "tame_chance": 28,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Sarco.png"
   },
   {
     "name": "Shadowmane",
     "spawn_chance": 10,
-    "catch_chance": 34,
-    "maps": []
+    "tame_chance": 34,
+    "maps": [],
+    "icon": "Shadowmane.png"
   },
   {
     "name": "Shastasaurus",
     "spawn_chance": 10,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Shastasaurus.png"
   },
   {
     "name": "Shinehorn",
     "spawn_chance": 9,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Shinehorn.png"
   },
   {
     "name": "Sinomacrops",
     "spawn_chance": 8,
-    "catch_chance": 23,
-    "maps": []
+    "tame_chance": 23,
+    "maps": [],
+    "icon": "Sinomacrops.png"
   },
   {
     "name": "Snow Owl",
     "spawn_chance": 10,
-    "catch_chance": 39,
+    "tame_chance": 39,
     "maps": [
       "Extinction"
-    ]
+    ],
+    "icon": "Snow Owl.png"
   },
   {
     "name": "Spino",
     "spawn_chance": 8,
-    "catch_chance": 29,
+    "tame_chance": 29,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Spino.png"
   },
   {
     "name": "Stegosaurus",
     "spawn_chance": 10,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Stegosaurus.png"
   },
   {
     "name": "Steinbjörn",
     "spawn_chance": 7,
-    "catch_chance": 21,
-    "maps": []
+    "tame_chance": 21,
+    "maps": [],
+    "icon": null
   },
   {
     "name": "Tapejara",
     "spawn_chance": 4,
-    "catch_chance": 43,
+    "tame_chance": 43,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Tapejara.png"
   },
   {
     "name": "Tek Stryder",
     "spawn_chance": 5,
-    "catch_chance": 21,
-    "maps": []
+    "tame_chance": 21,
+    "maps": [],
+    "icon": "Tek Stryder.png"
   },
   {
     "name": "Terror Bird",
     "spawn_chance": 6,
-    "catch_chance": 44,
+    "tame_chance": 44,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Terror Bird.png"
   },
   {
     "name": "Therizinosaur",
     "spawn_chance": 5,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Therizinosaur.png"
   },
   {
     "name": "Thorny Dragon",
     "spawn_chance": 3,
-    "catch_chance": 9,
+    "tame_chance": 9,
     "maps": [
       "Scorched Earth",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Thorny Dragon.png"
   },
   {
     "name": "Thylacoleo",
     "spawn_chance": 6,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Thylacoleo.png"
   },
   {
     "name": "Titanoboa",
     "spawn_chance": 3,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "The Island",
       "Scorched Earth",
@@ -1614,169 +1773,187 @@
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Titanoboa.png"
   },
   {
     "name": "Titanosaur",
     "spawn_chance": 3,
-    "catch_chance": 11,
+    "tame_chance": 11,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center"
-    ]
+    ],
+    "icon": "Titanosaur.png"
   },
   {
     "name": "Triceratops",
     "spawn_chance": 9,
-    "catch_chance": 31,
+    "tame_chance": 31,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Triceratops.png"
   },
   {
     "name": "Trilobite",
     "spawn_chance": 7,
-    "catch_chance": 20,
+    "tame_chance": 20,
     "maps": [
       "The Island",
       "The Center",
       "Aberration",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Trilobite.png"
   },
   {
     "name": "Troodon",
     "spawn_chance": 12,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Troodon.png"
   },
   {
     "name": "Tropeognathus",
     "spawn_chance": 7,
-    "catch_chance": 24,
-    "maps": []
+    "tame_chance": 24,
+    "maps": [],
+    "icon": "Tropeognathus.png"
   },
   {
     "name": "Tusoteuthis",
     "spawn_chance": 4,
-    "catch_chance": 26,
+    "tame_chance": 26,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Tusoteuthis.png"
   },
   {
     "name": "Unicorn",
     "spawn_chance": 8,
-    "catch_chance": 30,
+    "tame_chance": 30,
     "maps": [
       "The Island",
       "Astraeos"
-    ]
+    ],
+    "icon": "Unicorn.png"
   },
   {
     "name": "Velonasaur",
     "spawn_chance": 8,
-    "catch_chance": 36,
+    "tame_chance": 36,
     "maps": [
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Velonasaur.png"
   },
   {
     "name": "Voidwyrm",
     "spawn_chance": 6,
-    "catch_chance": 31,
-    "maps": []
+    "tame_chance": 31,
+    "maps": [],
+    "icon": "Voidwyrm.png"
   },
   {
     "name": "Vulture",
     "spawn_chance": 10,
-    "catch_chance": 38,
+    "tame_chance": 38,
     "maps": [
       "Scorched Earth",
       "Astraeos"
-    ]
+    ],
+    "icon": "Vulture.png"
   },
   {
     "name": "Woolly Rhino",
     "spawn_chance": 6,
-    "catch_chance": 42,
+    "tame_chance": 42,
     "maps": [
       "The Island",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Woolly Rhino.png"
   },
   {
     "name": "Lightning Wyvern",
     "spawn_chance": 3,
-    "catch_chance": 19,
+    "tame_chance": 19,
     "maps": [
       "Scorched Earth",
       "Astraeos"
-    ]
+    ],
+    "icon": "Lightning Wyvern.png"
   },
   {
     "name": "Fire Wyvern",
     "spawn_chance": 3,
-    "catch_chance": 19,
+    "tame_chance": 19,
     "maps": [
       "Scorched Earth",
       "Astraeos"
-    ]
+    ],
+    "icon": "Fire Wyvern.png"
   },
   {
     "name": "Poison Wyvern",
     "spawn_chance": 3,
-    "catch_chance": 19,
+    "tame_chance": 19,
     "maps": [
       "Scorched Earth",
       "Astraeos"
-    ]
+    ],
+    "icon": "Poison Wyvern.png"
   },
   {
     "name": "Xiphactinus",
     "spawn_chance": 5,
-    "catch_chance": 23,
+    "tame_chance": 23,
     "maps": [
       "The Island",
       "The Center",
       "Astraeos"
-    ]
+    ],
+    "icon": "Xiphactinus.png"
   },
   {
     "name": "Yi Ling",
     "spawn_chance": 5,
-    "catch_chance": 41,
+    "tame_chance": 41,
     "maps": [
       "Aberration"
-    ]
+    ],
+    "icon": "Yi Ling.png"
   },
   {
     "name": "Yutyrannus",
     "spawn_chance": 4,
-    "catch_chance": 40,
+    "tame_chance": 40,
     "maps": [
       "The Island",
       "Scorched Earth",
       "The Center",
       "Extinction",
       "Astraeos"
-    ]
+    ],
+    "icon": "Yutyrannus.png"
   }
 ]

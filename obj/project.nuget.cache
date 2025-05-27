@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T+Er3hZ4K1M=",
+  "dgSpecHash": "KyliS3yPljg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rumsp\\Documents\\GitHub\\CatchDinos\\Catch Dinos.csproj",
+  "projectFilePath": "C:\\Users\\rumsp\\Documents\\GitHub\\DinoTame\\DinoTame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rumsp\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.5\\microsoft.bcl.asyncinterfaces.9.0.5.nupkg.sha512",
     "C:\\Users\\rumsp\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
