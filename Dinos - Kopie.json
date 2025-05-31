@@ -11,9 +11,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Achatina.png",
-    "health": 75,
-    "damage": 1
+    "icon": "Achatina.png"
   },
   {
     "name": "Allosaurus",
@@ -25,18 +23,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Allosaurus.png",
-    "health": 630,
-    "damage": 35
+    "icon": "Allosaurus.png"
   },
   {
     "name": "Amargasaurus",
     "spawn_chance": 7,
     "tame_chance": 45,
     "maps": [],
-    "icon": "Amargasaurus.png",
-    "health": 1250,
-    "damage": 40
+    "icon": "Amargasaurus.png"
   },
   {
     "name": "Ammonite",
@@ -47,18 +41,14 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Ammonite.png",
-    "health": 165,
-    "damage": 1
+    "icon": "Ammonite.png"
   },
   {
     "name": "Andrewsarchus",
     "spawn_chance": 10,
     "tame_chance": 32,
     "maps": [],
-    "icon": "Andrewsarchus.png",
-    "health": 800,
-    "damage": 41
+    "icon": "Andrewsarchus.png"
   },
   {
     "name": "Anglerfish",
@@ -70,9 +60,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Anglerfish.png",
-    "health": 450,
-    "damage": 30
+    "icon": "Anglerfish.png"
   },
   {
     "name": "Ankylosaurus",
@@ -86,9 +74,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Ankylosaurus.png",
-    "health": 700,
-    "damage": 50
+    "icon": "Ankylosaurus.png"
   },
   {
     "name": "Araneo",
@@ -102,9 +88,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Araneo.png",
-    "health": 150,
-    "damage": 10
+    "icon": "Araneo.png"
   },
   {
     "name": "Archaeopteryx",
@@ -116,9 +100,7 @@
       "The Center",
       "Extinction"
     ],
-    "icon": "Archaeopteryx.png",
-    "health": 125,
-    "damage": 5
+    "icon": "Archaeopteryx.png"
   },
   {
     "name": "Archelon",
@@ -129,9 +111,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Archelon.png",
-    "health": 1400,
-    "damage": 28
+    "icon": "Archelon.png"
   },
   {
     "name": "Argentavis",
@@ -144,9 +124,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Argentavis.png",
-    "health": 365,
-    "damage": 25
+    "icon": "Argentavis.png"
   },
   {
     "name": "Armadoggo",
@@ -155,9 +133,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Armadoggo.png",
-    "health": 200,
-    "damage": 15
+    "icon": "Armadoggo.png"
   },
   {
     "name": "Arthropluera",
@@ -171,27 +147,21 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Arthropluera.png",
-    "health": 500,
-    "damage": 18
+    "icon": "Arthropluera.png"
   },
   {
     "name": "Astrocetus",
     "spawn_chance": 2,
     "tame_chance": 20,
     "maps": [],
-    "icon": "Astrocetus.png",
-    "health": 2800,
-    "damage": 30
+    "icon": "Astrocetus.png"
   },
   {
     "name": "Astrodelphis",
     "spawn_chance": 4,
     "tame_chance": 42,
     "maps": [],
-    "icon": "Astrodelphis.png",
-    "health": 325,
-    "damage": 24
+    "icon": "Astrodelphis.png"
   },
   {
     "name": "Baryonyx",
@@ -204,9 +174,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Baryonyx.png",
-    "health": 440,
-    "damage": 35
+    "icon": "Baryonyx.png"
   },
   {
     "name": "Basilisk",
@@ -215,9 +183,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Basilisk.png",
-    "health": 2750,
-    "damage": 55
+    "icon": "Basilisk.png"
   },
   {
     "name": "Basilosaurus",
@@ -228,9 +194,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Basilosaurus.png",
-    "health": 2400,
-    "damage": 47
+    "icon": "Basilosaurus.png"
   },
   {
     "name": "Beelzebufo",
@@ -243,27 +207,21 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Beelzebufo.png",
-    "health": 220,
-    "damage": 12
+    "icon": "Beelzebufo.png"
   },
   {
     "name": "Bison",
     "spawn_chance": 8,
     "tame_chance": 36,
     "maps": [],
-    "icon": null,
-    "health": 0,
-    "damage": 0
+    "icon": null
   },
   {
     "name": "Bloodstalker",
     "spawn_chance": 7,
     "tame_chance": 31,
     "maps": [],
-    "icon": "Bloodstalker.png",
-    "health": 450,
-    "damage": 26
+    "icon": "Bloodstalker.png"
   },
   {
     "name": "Brontosaurus",
@@ -275,9 +233,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Brontosaurus.png",
-    "health": 2070,
-    "damage": 60
+    "icon": "Brontosaurus.png"
   },
   {
     "name": "Broodmother Lysrix",
@@ -287,9 +243,7 @@
       "The Island",
       "The Center"
     ],
-    "icon": "Broodmother Lysrix.png",
-    "health": 324000,
-    "damage": 180
+    "icon": "Broodmother Lysrix.png"
   },
   {
     "name": "Bulbdog",
@@ -298,9 +252,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Bulbdog.png",
-    "health": 145,
-    "damage": 1
+    "icon": "Bulbdog.png"
   },
   {
     "name": "Carbonemys",
@@ -313,9 +265,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Carbonemys.png",
-    "health": 700,
-    "damage": 13
+    "icon": "Carbonemys.png"
   },
   {
     "name": "Carcharodontosaurus",
@@ -327,9 +277,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Carcharodontosaurus.png",
-    "health": 70000,
-    "damage": 211
+    "icon": "Carcharodontosaurus.png"
   },
   {
     "name": "Carnotaurus",
@@ -343,9 +291,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Carnotaurus.png",
-    "health": 420,
-    "damage": 35
+    "icon": "Carnotaurus.png"
   },
   {
     "name": "Castoroides",
@@ -357,9 +303,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Castoroides.png",
-    "health": 450,
-    "damage": 28
+    "icon": "Castoroides.png"
   },
   {
     "name": "Cat",
@@ -370,9 +314,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": null,
-    "health": 125,
-    "damage": 10
+    "icon": null
   },
   {
     "name": "Ceratosaurus",
@@ -385,9 +327,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Ceratosaurus.png",
-    "health": 550,
-    "damage": 25
+    "icon": "Ceratosaurus.png"
   },
   {
     "name": "Chalicotherium",
@@ -399,9 +339,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Chalicotherium.png",
-    "health": 600,
-    "damage": 36
+    "icon": "Chalicotherium.png"
   },
   {
     "name": "Cnidaria",
@@ -413,9 +351,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Cnidaria.png",
-    "health": 180,
-    "damage": 30
+    "icon": "Cnidaria.png"
   },
   {
     "name": "Compy",
@@ -427,9 +363,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Compy.png",
-    "health": 50,
-    "damage": 4
+    "icon": "Compy.png"
   },
   {
     "name": "Cosmo",
@@ -438,18 +372,14 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Cosmo.png",
-    "health": 115,
-    "damage": 1
+    "icon": "Cosmo.png"
   },
   {
     "name": "Crystal Wyvern",
     "spawn_chance": 2,
     "tame_chance": 10,
     "maps": [],
-    "icon": "Crystal Wyvern.png",
-    "health": 1295,
-    "damage": 45
+    "icon": "Crystal Wyvern.png"
   },
   {
     "name": "Daeodon",
@@ -462,9 +392,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Daeodon.png",
-    "health": 900,
-    "damage": 29
+    "icon": "Daeodon.png"
   },
   {
     "name": "Deathworm",
@@ -473,18 +401,14 @@
     "maps": [
       "Scorched Earth"
     ],
-    "icon": "Deathworm.png",
-    "health": 20000,
-    "damage": 225
+    "icon": "Deathworm.png"
   },
   {
     "name": "Deinonychus",
     "spawn_chance": 8,
     "tame_chance": 46,
     "maps": [],
-    "icon": "Deinonychus.png",
-    "health": 200,
-    "damage": 30
+    "icon": "Deinonychus.png"
   },
   {
     "name": "Deinosuchus",
@@ -497,9 +421,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Deinosuchus.png",
-    "health": 1000,
-    "damage": 55
+    "icon": "Deinosuchus.png"
   },
   {
     "name": "Deinotherium",
@@ -512,9 +434,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": null,
-    "health": 1750,
-    "damage": 35
+    "icon": null
   },
   {
     "name": "Desert Titan",
@@ -523,18 +443,14 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Desert Titan.png",
-    "health": 250000,
-    "damage": 1
+    "icon": "Desert Titan.png"
   },
   {
     "name": "Desmodus",
     "spawn_chance": 9,
     "tame_chance": 43,
     "maps": [],
-    "icon": "Desmodus.png",
-    "health": 325,
-    "damage": 40
+    "icon": "Desmodus.png"
   },
   {
     "name": "Dilophosaur",
@@ -546,9 +462,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dilophosaur.png",
-    "health": 130,
-    "damage": 10
+    "icon": "Dilophosaur.png"
   },
   {
     "name": "Dimetrodon",
@@ -561,9 +475,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dimetrodon.png",
-    "health": 350,
-    "damage": 20
+    "icon": "Dimetrodon.png"
   },
   {
     "name": "Dimorphodon",
@@ -576,9 +488,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dimorphodon.png",
-    "health": 125,
-    "damage": 23
+    "icon": "Dimorphodon.png"
   },
   {
     "name": "Diplocaulus",
@@ -591,9 +501,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Diplocaulus.png",
-    "health": 250,
-    "damage": 10
+    "icon": "Diplocaulus.png"
   },
   {
     "name": "Diplodocus",
@@ -606,9 +514,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Diplodocus.png",
-    "health": 1700,
-    "damage": 1
+    "icon": "Diplodocus.png"
   },
   {
     "name": "Dire Bear",
@@ -621,9 +527,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dire Bear.png",
-    "health": 400,
-    "damage": 50
+    "icon": "Dire Bear.png"
   },
   {
     "name": "Direwolf",
@@ -636,9 +540,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Direwolf.png",
-    "health": 330,
-    "damage": 33
+    "icon": "Direwolf.png"
   },
   {
     "name": "Dodo",
@@ -651,9 +553,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dodo.png",
-    "health": 40,
-    "damage": 5
+    "icon": "Dodo.png"
   },
   {
     "name": "Doedicurus",
@@ -667,9 +567,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Doedicurus.png",
-    "health": 850,
-    "damage": 32
+    "icon": "Doedicurus.png"
   },
   {
     "name": "Dragon",
@@ -678,9 +576,7 @@
     "maps": [
       "The Island"
     ],
-    "icon": "Dragon.png",
-    "health": 432000,
-    "damage": 500
+    "icon": "Dragon.png"
   },
   {
     "name": "Dreadmare",
@@ -692,9 +588,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dreadmare.png",
-    "health": 1000,
-    "damage": 18
+    "icon": "Dreadmare.png"
   },
   {
     "name": "Dreadnoughtus",
@@ -704,9 +598,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dreadnoughtus.png",
-    "health": 100000,
-    "damage": 1080
+    "icon": "Dreadnoughtus.png"
   },
   {
     "name": "Dung Beetle",
@@ -720,9 +612,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Dung Beetle.png",
-    "health": 200,
-    "damage": 5
+    "icon": "Dung Beetle.png"
   },
   {
     "name": "Dunkleosteus",
@@ -733,9 +623,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Dunkleosteus.png",
-    "health": 710,
-    "damage": 60
+    "icon": "Dunkleosteus.png"
   },
   {
     "name": "Electrophorus",
@@ -748,9 +636,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Electrophorus.png",
-    "health": 180,
-    "damage": 3
+    "icon": "Electrophorus.png"
   },
   {
     "name": "Equus",
@@ -764,9 +650,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Equus.png",
-    "health": 240,
-    "damage": 9
+    "icon": "Equus.png"
   },
   {
     "name": "Eurypterid",
@@ -777,9 +661,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Eurypterid.png",
-    "health": 160,
-    "damage": 7
+    "icon": "Eurypterid.png"
   },
   {
     "name": "Fasolasuchus",
@@ -790,9 +672,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Fasolasuchus.png",
-    "health": 950,
-    "damage": 55
+    "icon": "Fasolasuchus.png"
   },
   {
     "name": "Featherlight",
@@ -801,36 +681,28 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Featherlight.png",
-    "health": 115,
-    "damage": 1
+    "icon": "Featherlight.png"
   },
   {
     "name": "Fenrir",
     "spawn_chance": 10,
     "tame_chance": 21,
     "maps": [],
-    "icon": "Fenrir.png",
-    "health": 750,
-    "damage": 50
+    "icon": "Fenrir.png"
   },
   {
     "name": "Ferox",
     "spawn_chance": 5,
     "tame_chance": 38,
     "maps": [],
-    "icon": "Ferox.png",
-    "health": 55,
-    "damage": 5
+    "icon": "Ferox.png"
   },
   {
     "name": "Fjordhawk",
     "spawn_chance": 10,
     "tame_chance": 40,
     "maps": [],
-    "icon": "Fjordhawk.png",
-    "health": 125,
-    "damage": 16
+    "icon": "Fjordhawk.png"
   },
   {
     "name": "Forest Titan",
@@ -839,9 +711,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Forest Titan.png",
-    "health": 400000,
-    "damage": 1
+    "icon": "Forest Titan.png"
   },
   {
     "name": "Gacha",
@@ -850,9 +720,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Gacha.png",
-    "health": 750,
-    "damage": 32
+    "icon": "Gacha.png"
   },
   {
     "name": "Gallimimus",
@@ -865,9 +733,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Gallimimus.png",
-    "health": 150,
-    "damage": 8
+    "icon": "Gallimimus.png"
   },
   {
     "name": "Gasbags",
@@ -877,9 +743,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Gasbags.png",
-    "health": 650,
-    "damage": 5
+    "icon": "Gasbags.png"
   },
   {
     "name": "Giant Bee",
@@ -893,9 +757,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Giant Bee.png",
-    "health": 80,
-    "damage": 8
+    "icon": "Giant Bee.png"
   },
   {
     "name": "Giganotosaurus",
@@ -907,9 +769,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Giganotosaurus.png",
-    "health": 80000,
-    "damage": 500
+    "icon": "Giganotosaurus.png"
   },
   {
     "name": "Gigantopithecus",
@@ -921,9 +781,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Gigantopithecus.png",
-    "health": 640,
-    "damage": 40
+    "icon": "Gigantopithecus.png"
   },
   {
     "name": "Gigantoraptor",
@@ -936,9 +794,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Gigantoraptor.png",
-    "health": 770,
-    "damage": 20
+    "icon": "Gigantoraptor.png"
   },
   {
     "name": "Glowtail",
@@ -947,18 +803,14 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Glowtail.png",
-    "health": 115,
-    "damage": 1
+    "icon": "Glowtail.png"
   },
   {
     "name": "Griffin",
     "spawn_chance": 5,
     "tame_chance": 42,
     "maps": [],
-    "icon": "Griffin.png",
-    "health": 950,
-    "damage": 27
+    "icon": "Griffin.png"
   },
   {
     "name": "Hesperornis",
@@ -970,9 +822,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Hesperornis.png",
-    "health": 95,
-    "damage": 1
+    "icon": "Hesperornis.png"
   },
   {
     "name": "Hyaenodon",
@@ -985,9 +835,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Hyaenodon.png",
-    "health": 175,
-    "damage": 15
+    "icon": "Hyaenodon.png"
   },
   {
     "name": "Ice Titan",
@@ -996,9 +844,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Ice Titan.png",
-    "health": 350000,
-    "damage": 2500
+    "icon": "Ice Titan.png"
   },
   {
     "name": "Ichthyornis",
@@ -1010,9 +856,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Ichthyornis.png",
-    "health": 50,
-    "damage": 1
+    "icon": "Ichthyornis.png"
   },
   {
     "name": "Ichthyosaurus",
@@ -1023,9 +867,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Ichthyosaurus.png",
-    "health": 275,
-    "damage": 15
+    "icon": "Ichthyosaurus.png"
   },
   {
     "name": "Iguanodon",
@@ -1039,9 +881,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Iguanodon.png",
-    "health": 250,
-    "damage": 25
+    "icon": "Iguanodon.png"
   },
   {
     "name": "Jerboa",
@@ -1050,9 +890,7 @@
     "maps": [
       "Scorched Earth"
     ],
-    "icon": "Jerboa.png",
-    "health": 55,
-    "damage": 3
+    "icon": "Jerboa.png"
   },
   {
     "name": "Kairuku",
@@ -1064,9 +902,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Kairuku.png",
-    "health": 95,
-    "damage": 8
+    "icon": "Kairuku.png"
   },
   {
     "name": "Kaprosuchus",
@@ -1079,9 +915,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Kaprosuchus.png",
-    "health": 200,
-    "damage": 25
+    "icon": "Kaprosuchus.png"
   },
   {
     "name": "Karkinos",
@@ -1090,9 +924,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Karkinos.png",
-    "health": 1200,
-    "damage": 32
+    "icon": "Karkinos.png"
   },
   {
     "name": "Kentrosaurus",
@@ -1105,9 +937,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Kentrosaurus.png",
-    "health": 650,
-    "damage": 10
+    "icon": "Kentrosaurus.png"
   },
   {
     "name": "King Titan",
@@ -1117,9 +947,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "King Titan.png",
-    "health": 1500000,
-    "damage": 1
+    "icon": "King Titan.png"
   },
   {
     "name": "Leedsichthys",
@@ -1130,9 +958,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Leedsichthys.png",
-    "health": 4400,
-    "damage": 115
+    "icon": "Leedsichthys.png"
   },
   {
     "name": "Liopleurodon",
@@ -1143,9 +969,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Liopleurodon.png",
-    "health": 3200,
-    "damage": 40
+    "icon": "Liopleurodon.png"
   },
   {
     "name": "Lymantria",
@@ -1156,9 +980,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Lymantria.png",
-    "health": 260,
-    "damage": 18
+    "icon": "Lymantria.png"
   },
   {
     "name": "Lystrosaurus",
@@ -1172,27 +994,21 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Lystrosaurus.png",
-    "health": 90,
-    "damage": 6
+    "icon": "Lystrosaurus.png"
   },
   {
     "name": "Maewing",
     "spawn_chance": 7,
     "tame_chance": 37,
     "maps": [],
-    "icon": "Maewing.png",
-    "health": 700,
-    "damage": 20
+    "icon": "Maewing.png"
   },
   {
     "name": "Magmasaur",
     "spawn_chance": 9,
     "tame_chance": 44,
     "maps": [],
-    "icon": "Magmasaur.png",
-    "health": 3000,
-    "damage": 120
+    "icon": "Magmasaur.png"
   },
   {
     "name": "Mammoth",
@@ -1204,9 +1020,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Mammoth.png",
-    "health": 850,
-    "damage": 48
+    "icon": "Mammoth.png"
   },
   {
     "name": "Managarmr",
@@ -1215,9 +1029,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Managarmr.png",
-    "health": 825,
-    "damage": 35
+    "icon": "Managarmr.png"
   },
   {
     "name": "Manta",
@@ -1229,9 +1041,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Manta.png",
-    "health": 320,
-    "damage": 28
+    "icon": "Manta.png"
   },
   {
     "name": "Manticore",
@@ -1240,9 +1050,7 @@
     "maps": [
       "Scorched Earth"
     ],
-    "icon": "Manticore.png",
-    "health": 100000,
-    "damage": 85
+    "icon": "Manticore.png"
   },
   {
     "name": "Mantis",
@@ -1253,18 +1061,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Mantis.png",
-    "health": 275,
-    "damage": 34
+    "icon": "Mantis.png"
   },
   {
     "name": "Megachelon",
     "spawn_chance": 5,
     "tame_chance": 36,
     "maps": [],
-    "icon": "Megachelon.png",
-    "health": 1920,
-    "damage": 125
+    "icon": "Megachelon.png"
   },
   {
     "name": "Megalania",
@@ -1278,9 +1082,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Megalania.png",
-    "health": 480,
-    "damage": 10
+    "icon": "Megalania.png"
   },
   {
     "name": "Megaloceros",
@@ -1292,9 +1094,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Megaloceros.png",
-    "health": 300,
-    "damage": 30
+    "icon": "Megaloceros.png"
   },
   {
     "name": "Megalodon",
@@ -1305,9 +1105,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Megalodon.png",
-    "health": 600,
-    "damage": 40
+    "icon": "Megalodon.png"
   },
   {
     "name": "Megalosaurus",
@@ -1321,9 +1119,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Megalosaurus.png",
-    "health": 1025,
-    "damage": 75
+    "icon": "Megalosaurus.png"
   },
   {
     "name": "Meganeura",
@@ -1336,9 +1132,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Meganeura.png",
-    "health": 45,
-    "damage": 10
+    "icon": "Meganeura.png"
   },
   {
     "name": "Megapithecus",
@@ -1348,18 +1142,14 @@
       "The Island",
       "The Center"
     ],
-    "icon": "Megapithecus.png",
-    "health": 180000,
-    "damage": 400
+    "icon": "Megapithecus.png"
   },
   {
     "name": "Megaraptor",
     "spawn_chance": 11,
     "tame_chance": 60,
     "maps": [],
-    "icon": null,
-    "health": 0,
-    "damage": 0
+    "icon": null
   },
   {
     "name": "Megatherium",
@@ -1372,9 +1162,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Megatherium.png",
-    "health": 740,
-    "damage": 32
+    "icon": "Megatherium.png"
   },
   {
     "name": "Mesopithecus",
@@ -1386,9 +1174,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Mesopithecus.png",
-    "health": 115,
-    "damage": 12
+    "icon": "Mesopithecus.png"
   },
   {
     "name": "Microraptor",
@@ -1401,9 +1187,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Microraptor.png",
-    "health": 130,
-    "damage": 8
+    "icon": "Microraptor.png"
   },
   {
     "name": "Morellatops",
@@ -1414,9 +1198,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Morellatops.png",
-    "health": 400,
-    "damage": 32
+    "icon": "Morellatops.png"
   },
   {
     "name": "Mosasaurus",
@@ -1427,9 +1209,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Mosasaurus.png",
-    "health": 3600,
-    "damage": 100
+    "icon": "Mosasaurus.png"
   },
   {
     "name": "Moschops",
@@ -1443,9 +1223,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Moschops.png",
-    "health": 375,
-    "damage": 32
+    "icon": "Moschops.png"
   },
   {
     "name": "Nameless",
@@ -1454,18 +1232,14 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Nameless.png",
-    "health": 220,
-    "damage": 10
+    "icon": "Nameless.png"
   },
   {
     "name": "Noglin",
     "spawn_chance": 4,
     "tame_chance": 31,
     "maps": [],
-    "icon": "Noglin.png",
-    "health": 50,
-    "damage": 4
+    "icon": "Noglin.png"
   },
   {
     "name": "Oasisaur",
@@ -1474,9 +1248,7 @@
     "maps": [
       "Scorched Earth"
     ],
-    "icon": "Oasisaur.png",
-    "health": 20000,
-    "damage": 1
+    "icon": "Oasisaur.png"
   },
   {
     "name": "Onyc",
@@ -1489,9 +1261,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Onyc.png",
-    "health": 250,
-    "damage": 35
+    "icon": "Onyc.png"
   },
   {
     "name": "Otter",
@@ -1504,9 +1274,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Otter.png",
-    "health": 40,
-    "damage": 10
+    "icon": "Otter.png"
   },
   {
     "name": "Overseer",
@@ -1515,9 +1283,7 @@
     "maps": [
       "The Island"
     ],
-    "icon": "Overseer.png",
-    "health": 63360,
-    "damage": 1
+    "icon": "Overseer.png"
   },
   {
     "name": "Oviraptor",
@@ -1530,9 +1296,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Oviraptor.png",
-    "health": 140,
-    "damage": 12
+    "icon": "Oviraptor.png"
   },
   {
     "name": "Ovis",
@@ -1546,9 +1310,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Ovis.png",
-    "health": 100,
-    "damage": 5
+    "icon": "Ovis.png"
   },
   {
     "name": "Pachy",
@@ -1560,9 +1322,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Pachy.png",
-    "health": 175,
-    "damage": 10
+    "icon": "Pachy.png"
   },
   {
     "name": "Paraceratherium",
@@ -1576,9 +1336,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Paraceratherium.png",
-    "health": 1026,
-    "damage": 45
+    "icon": "Paraceratherium.png"
   },
   {
     "name": "Parasaur",
@@ -1592,9 +1350,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Parasaur.png",
-    "health": 200,
-    "damage": 12
+    "icon": "Parasaur.png"
   },
   {
     "name": "Pegomastax",
@@ -1607,9 +1363,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Pegomastax.png",
-    "health": 120,
-    "damage": 10
+    "icon": "Pegomastax.png"
   },
   {
     "name": "Pelagornis",
@@ -1620,9 +1374,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Pelagornis.png",
-    "health": 240,
-    "damage": 16
+    "icon": "Pelagornis.png"
   },
   {
     "name": "Phiomia",
@@ -1634,9 +1386,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Phiomia.png",
-    "health": 300,
-    "damage": 10
+    "icon": "Phiomia.png"
   },
   {
     "name": "Phoenix",
@@ -1645,9 +1395,7 @@
     "maps": [
       "Scorched Earth"
     ],
-    "icon": "Phoenix.png",
-    "health": 640,
-    "damage": 14
+    "icon": "Phoenix.png"
   },
   {
     "name": "Piranha",
@@ -1661,9 +1409,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Piranha.png",
-    "health": 150,
-    "damage": 22
+    "icon": "Piranha.png"
   },
   {
     "name": "Plesiosaur",
@@ -1674,9 +1420,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Plesiosaur.png",
-    "health": 2400,
-    "damage": 75
+    "icon": "Plesiosaur.png"
   },
   {
     "name": "Procoptodon",
@@ -1689,9 +1433,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Procoptodon.png",
-    "health": 400,
-    "damage": 20
+    "icon": "Procoptodon.png"
   },
   {
     "name": "Pteranodon",
@@ -1703,9 +1445,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Pteranodon.png",
-    "health": 210,
-    "damage": 18
+    "icon": "Pteranodon.png"
   },
   {
     "name": "Pulmonoscorpius",
@@ -1719,9 +1459,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Pulmonoscorpius.png",
-    "health": 280,
-    "damage": 15
+    "icon": "Pulmonoscorpius.png"
   },
   {
     "name": "Purlovia",
@@ -1735,9 +1473,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Purlovia.png",
-    "health": 275,
-    "damage": 32
+    "icon": "Purlovia.png"
   },
   {
     "name": "Pyromane",
@@ -1749,9 +1485,7 @@
       "Aberration",
       "Astraeos"
     ],
-    "icon": "Pyromane.png",
-    "health": 600,
-    "damage": 35
+    "icon": "Pyromane.png"
   },
   {
     "name": "Quetzal",
@@ -1763,9 +1497,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Quetzal.png",
-    "health": 1200,
-    "damage": 32
+    "icon": "Quetzal.png"
   },
   {
     "name": "Raptor",
@@ -1779,9 +1511,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Raptor.png",
-    "health": 200,
-    "damage": 15
+    "icon": "Raptor.png"
   },
   {
     "name": "Ravager",
@@ -1790,9 +1520,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Ravager.png",
-    "health": 400,
-    "damage": 25
+    "icon": "Ravager.png"
   },
   {
     "name": "Reaper",
@@ -1801,9 +1529,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Reaper.png",
-    "health": 2000,
-    "damage": 85
+    "icon": "Reaper.png"
   },
   {
     "name": "Rex",
@@ -1816,9 +1542,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Rex.png",
-    "health": 1100,
-    "damage": 62
+    "icon": "Rex.png"
   },
   {
     "name": "Rhyniognatha",
@@ -1828,9 +1552,7 @@
       "The Island",
       "Astraeos"
     ],
-    "icon": "Rhyniognatha.png",
-    "health": 900,
-    "damage": 55
+    "icon": "Rhyniognatha.png"
   },
   {
     "name": "Rock Drake",
@@ -1839,9 +1561,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Rock Drake.png",
-    "health": 1950,
-    "damage": 60
+    "icon": "Rock Drake.png"
   },
   {
     "name": "Rock Elemental",
@@ -1852,9 +1572,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Rock Elemental.png",
-    "health": 25000,
-    "damage": 120
+    "icon": "Rock Elemental.png"
   },
   {
     "name": "Rockwell",
@@ -1863,9 +1581,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Rockwell.png",
-    "health": 42000,
-    "damage": 1
+    "icon": "Rockwell.png"
   },
   {
     "name": "Roll Rat",
@@ -1874,9 +1590,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Roll Rat.png",
-    "health": 850,
-    "damage": 42
+    "icon": "Roll Rat.png"
   },
   {
     "name": "Sabertooth",
@@ -1889,9 +1603,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Sabertooth.png",
-    "health": 250,
-    "damage": 29
+    "icon": "Sabertooth.png"
   },
   {
     "name": "Sarco",
@@ -1904,18 +1616,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Sarco.png",
-    "health": 400,
-    "damage": 35
+    "icon": "Sarco.png"
   },
   {
     "name": "Shadowmane",
     "spawn_chance": 10,
     "tame_chance": 34,
     "maps": [],
-    "icon": "Shadowmane.png",
-    "health": 825,
-    "damage": 35
+    "icon": "Shadowmane.png"
   },
   {
     "name": "Shastasaurus",
@@ -1925,9 +1633,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Shastasaurus.png",
-    "health": 4500,
-    "damage": 75
+    "icon": "Shastasaurus.png"
   },
   {
     "name": "Shinehorn",
@@ -1936,18 +1642,14 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Shinehorn.png",
-    "health": 115,
-    "damage": 1
+    "icon": "Shinehorn.png"
   },
   {
     "name": "Sinomacrops",
     "spawn_chance": 8,
     "tame_chance": 23,
     "maps": [],
-    "icon": "Sinomacrops.png",
-    "health": 110,
-    "damage": 10
+    "icon": "Sinomacrops.png"
   },
   {
     "name": "Snow Owl",
@@ -1956,9 +1658,7 @@
     "maps": [
       "Extinction"
     ],
-    "icon": "Snow Owl.png",
-    "health": 325,
-    "damage": 25
+    "icon": "Snow Owl.png"
   },
   {
     "name": "Spino",
@@ -1971,9 +1671,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Spino.png",
-    "health": 700,
-    "damage": 40
+    "icon": "Spino.png"
   },
   {
     "name": "Stegosaurus",
@@ -1986,18 +1684,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Stegosaurus.png",
-    "health": 650,
-    "damage": 42
+    "icon": "Stegosaurus.png"
   },
   {
     "name": "Steinbjörn",
     "spawn_chance": 7,
     "tame_chance": 21,
     "maps": [],
-    "icon": null,
-    "health": 300000,
-    "damage": 375
+    "icon": null
   },
   {
     "name": "Tapejara",
@@ -2010,18 +1704,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Tapejara.png",
-    "health": 325,
-    "damage": 18
+    "icon": "Tapejara.png"
   },
   {
     "name": "Tek Stryder",
     "spawn_chance": 5,
     "tame_chance": 21,
     "maps": [],
-    "icon": "Tek Stryder.png",
-    "health": 4000,
-    "damage": 68
+    "icon": "Tek Stryder.png"
   },
   {
     "name": "Terror Bird",
@@ -2034,9 +1724,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Terror Bird.png",
-    "health": 270,
-    "damage": 18
+    "icon": "Terror Bird.png"
   },
   {
     "name": "Therizinosaur",
@@ -2048,9 +1736,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Therizinosaur.png",
-    "health": 870,
-    "damage": 52
+    "icon": "Therizinosaur.png"
   },
   {
     "name": "Thorny Dragon",
@@ -2061,9 +1747,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Thorny Dragon.png",
-    "health": 260,
-    "damage": 40
+    "icon": "Thorny Dragon.png"
   },
   {
     "name": "Thylacoleo",
@@ -2076,9 +1760,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Thylacoleo.png",
-    "health": 700,
-    "damage": 40
+    "icon": "Thylacoleo.png"
   },
   {
     "name": "Titanoboa",
@@ -2092,9 +1774,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Titanoboa.png",
-    "health": 170,
-    "damage": 30
+    "icon": "Titanoboa.png"
   },
   {
     "name": "Titanosaur",
@@ -2105,9 +1785,7 @@
       "Scorched Earth",
       "The Center"
     ],
-    "icon": "Titanosaur.png",
-    "health": 230000,
-    "damage": 1000
+    "icon": "Titanosaur.png"
   },
   {
     "name": "Triceratops",
@@ -2120,9 +1798,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Triceratops.png",
-    "health": 375,
-    "damage": 32
+    "icon": "Triceratops.png"
   },
   {
     "name": "Trilobite",
@@ -2135,9 +1811,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Trilobite.png",
-    "health": 160,
-    "damage": 1
+    "icon": "Trilobite.png"
   },
   {
     "name": "Troodon",
@@ -2150,18 +1824,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Troodon.png",
-    "health": 200,
-    "damage": 7
+    "icon": "Troodon.png"
   },
   {
     "name": "Tropeognathus",
     "spawn_chance": 7,
     "tame_chance": 24,
     "maps": [],
-    "icon": "Tropeognathus.png",
-    "health": 360,
-    "damage": 18
+    "icon": "Tropeognathus.png"
   },
   {
     "name": "Tusoteuthis",
@@ -2172,9 +1842,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Tusoteuthis.png",
-    "health": 2700,
-    "damage": 65
+    "icon": "Tusoteuthis.png"
   },
   {
     "name": "Unicorn",
@@ -2184,9 +1852,7 @@
       "The Island",
       "Astraeos"
     ],
-    "icon": "Unicorn.png",
-    "health": 240,
-    "damage": 9
+    "icon": "Unicorn.png"
   },
   {
     "name": "Velonasaur",
@@ -2196,18 +1862,14 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Velonasaur.png",
-    "health": 440,
-    "damage": 32
+    "icon": "Velonasaur.png"
   },
   {
     "name": "Voidwyrm",
     "spawn_chance": 6,
     "tame_chance": 31,
     "maps": [],
-    "icon": "Voidwyrm.png",
-    "health": 1295,
-    "damage": 80
+    "icon": "Voidwyrm.png"
   },
   {
     "name": "Vulture",
@@ -2217,9 +1879,7 @@
       "Scorched Earth",
       "Astraeos"
     ],
-    "icon": "Vulture.png",
-    "health": 125,
-    "damage": 23
+    "icon": "Vulture.png"
   },
   {
     "name": "Woolly Rhino",
@@ -2231,9 +1891,7 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Woolly Rhino.png",
-    "health": 500,
-    "damage": 40
+    "icon": "Woolly Rhino.png"
   },
   {
     "name": "Lightning Wyvern",
@@ -2243,9 +1901,7 @@
       "Scorched Earth",
       "Astraeos"
     ],
-    "icon": "Lightning Wyvern.png",
-    "health": 1295,
-    "damage": 80
+    "icon": "Lightning Wyvern.png"
   },
   {
     "name": "Fire Wyvern",
@@ -2255,9 +1911,7 @@
       "Scorched Earth",
       "Astraeos"
     ],
-    "icon": "Fire Wyvern.png",
-    "health": 1295,
-    "damage": 80
+    "icon": "Fire Wyvern.png"
   },
   {
     "name": "Poison Wyvern",
@@ -2267,9 +1921,7 @@
       "Scorched Earth",
       "Astraeos"
     ],
-    "icon": "Poison Wyvern.png",
-    "health": 1295,
-    "damage": 80
+    "icon": "Poison Wyvern.png"
   },
   {
     "name": "Xiphactinus",
@@ -2280,9 +1932,7 @@
       "The Center",
       "Astraeos"
     ],
-    "icon": "Xiphactinus.png",
-    "health": 450,
-    "damage": 23
+    "icon": "Xiphactinus.png"
   },
   {
     "name": "Yi Ling",
@@ -2291,9 +1941,7 @@
     "maps": [
       "Aberration"
     ],
-    "icon": "Yi Ling.png",
-    "health": 325,
-    "damage": 20
+    "icon": "Yi Ling.png"
   },
   {
     "name": "Yutyrannus",
@@ -2306,8 +1954,6 @@
       "Extinction",
       "Astraeos"
     ],
-    "icon": "Yutyrannus.png",
-    "health": 1100,
-    "damage": 55
+    "icon": "Yutyrannus.png"
   }
 ]
