@@ -3,9 +3,12 @@ using Streamer.bot.Plugin.Interface.Enums;
 using Streamer.bot.Plugin.Interface.Model;
 using Streamer.bot.Common.Events;
 using System;
+using System.Diagnostics;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using System.Globalization;
 
@@ -36,6 +39,7 @@ public class CPHInline : CPHInlineBase
     private string obsSourceTameChance;
     private string obsSourceProgressBar;
     private string obsSourceProgressBarPath;
+    private string saveFolderPath;
 
     // Helper class for deserialization
     public class DinoEntry
@@ -47,6 +51,11 @@ public class CPHInline : CPHInlineBase
         public string icon { get; set; }
         public double health { get; set; }
         public double damage { get; set; }
+    }
+
+    public class TamedDinoEntry
+    {
+        public string tame_date { get; set; }
     }
 
     class TameEntry
@@ -69,6 +78,8 @@ public class CPHInline : CPHInlineBase
         CPH.TryGetArg("obsSourceSpawnChance", out obsSourceSpawnChance);
         CPH.TryGetArg("obsSourceTameChanceTitle", out obsSourceTameChanceTitle);
         CPH.TryGetArg("obsSourceTameChance", out obsSourceTameChance);
+
+        CPH.TryGetArg("saveFolderPath", out saveFolderPath);
 
         if (string.IsNullOrEmpty(obsSceneName) || string.IsNullOrEmpty(obsSourceGroup) ||
             string.IsNullOrEmpty(obsSourceName) || string.IsNullOrEmpty(obsSourceIcon) || string.IsNullOrEmpty(obsSourceSpawnChanceTitle) ||
@@ -232,6 +243,24 @@ public class CPHInline : CPHInlineBase
         var user = args["user"].ToString();
         int eggPaste = CPH.GetTwitchUserVar<int>(user, "dinoTame_egg_paste", true);
         int eggPasteAmountToAdd = args.ContainsKey("eggPasteAmountToAdd") ? int.Parse(args["eggPasteAmountToAdd"].ToString()) : 10;
+
+        CPH.TryGetArg("rewardName", out string input);
+        Match match = Regex.Match(input, @"\d+");
+
+        if (match.Success)
+        {
+            eggPasteAmountToAdd = int.Parse(match.Value);
+        }
+        else
+        {
+            CPH.TryGetArg("rewardId", out string rewardId);
+            CPH.TryGetArg("redemptionId", out string redemptionId);
+
+            CPH.TwitchRedemptionCancel(rewardId, redemptionId);
+            return false;
+        }
+
+
         eggPaste += eggPasteAmountToAdd;
         CPH.SetTwitchUserVar(user, "dinoTame_egg_paste", eggPaste, true);
         CPH.TryGetArg("buyEggPasteMessage", out string message);
@@ -271,6 +300,30 @@ public class CPHInline : CPHInlineBase
             return false;
         }
 
+        if (GetUserTamedDino())
+        {
+            CPH.TryGetArg("useKibbleMessageAlreadyTamed", out message);
+            message = ReplaceWithArgs(message, new Dictionary<string, object>
+            {
+                { "user", user },
+                { "currentDino", currentDino }
+            });
+            CPH.SendMessage(message);
+            return false;
+        }
+
+        // Optional: prüfen ob User bereits mitgemacht hat
+        if (tameEntries.Count > 0 && tameEntries.Any(e => e.user.Equals(user, StringComparison.OrdinalIgnoreCase)))
+        {
+            CPH.TryGetArg("useKibbleMessageAlreadyTaming", out message);
+            message = ReplaceWithArgs(message, new Dictionary<string, object>
+            {
+                { "user", user }
+            });
+            CPH.SendMessage(message);
+            return false;
+        }
+
         if (!kibbleCosts.ContainsKey(input))
         {
             CPH.TryGetArg("useKibbleMessageInvalidType", out message);
@@ -297,29 +350,7 @@ public class CPHInline : CPHInlineBase
             return false;
         }
 
-        if (GetUserTamedDino())
-        {
-            CPH.TryGetArg("useKibbleMessageAlreadyTamed", out message);
-            message = ReplaceWithArgs(message, new Dictionary<string, object>
-            {
-                { "user", user },
-                { "currentDino", currentDino }
-            });
-            CPH.SendMessage(message);
-            return false;
-        }
 
-        // Optional: prüfen ob User bereits mitgemacht hat
-        if (tameEntries.Count > 0 && tameEntries.Any(e => e.user.Equals(user, StringComparison.OrdinalIgnoreCase)))
-        {
-            CPH.TryGetArg("useKibbleMessageAlreadyTaming", out message);
-            message = ReplaceWithArgs(message, new Dictionary<string, object>
-            {
-                { "user", user }
-            });
-            CPH.SendMessage(message);
-            return false;
-        }
 
         tameEntries.Add(new TameEntry { user = user, kibbleType = input });
         // Kibble abziehen
@@ -370,6 +401,8 @@ public class CPHInline : CPHInlineBase
 
         //Random rnd = new Random();
         List<string> winners = new();
+        double roll = rnd.NextDouble() * 100;
+
         foreach (var entry in tameEntries)
         {
             string user = entry.user;
@@ -382,7 +415,6 @@ public class CPHInline : CPHInlineBase
 
             double finalChance = baseTameChance * bonus;
             finalChance = Math.Min(finalChance, 100); // Maximal 100%
-            double roll = rnd.NextDouble() * 100;
             bool success = roll <= finalChance;
             CPH.LogInfo($"[DinoTame] {user} | Kibble: {kibble} | Chance: {finalChance:F1}% | Roll: {roll:F1}% | Success: {success}");
             if (success)
@@ -401,6 +433,7 @@ public class CPHInline : CPHInlineBase
                 { "winners", string.Join(", ", winners) }
             });
             CPH.SendMessage(message);
+            AutoCommitAndPush();
         }
         else
         {
@@ -449,10 +482,10 @@ public class CPHInline : CPHInlineBase
         }
 
         // JSON in Liste umwandeln
-        List<string> tamedDinos = JsonConvert.DeserializeObject<List<string>>(json);
+        Dictionary<string, TamedDinoEntry> tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
 
         // Abfragen, ob der Dino drin ist (Groß-/Kleinschreibung beachten!)
-        bool alreadyTamed = tamedDinos.Contains(currentDino);
+        bool alreadyTamed = tamedDinos.ContainsKey(currentDino);
 
         return alreadyTamed;
     }
@@ -471,7 +504,7 @@ public class CPHInline : CPHInlineBase
         }
 
         // JSON in Liste umwandeln
-        List<string> tamedDinos = JsonConvert.DeserializeObject<List<string>>(json);
+        Dictionary<string, TamedDinoEntry> tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
         return tamedDinos.Count;
     }
 
@@ -485,20 +518,45 @@ public class CPHInline : CPHInlineBase
 
         // Aktuelle Tamed Dinos des Users abrufen
         string json = CPH.GetTwitchUserVar<string>(user, "dinoTame_TamedDinos", true);
-        List<string> tamedDinos = string.IsNullOrEmpty(json) ? new List<string>() : JsonConvert.DeserializeObject<List<string>>(json);
+        Dictionary<string, TamedDinoEntry> tamedDinos;
+        
+        if (string.IsNullOrWhiteSpace(json))
+        {
+            tamedDinos = new Dictionary<string, TamedDinoEntry>();
+        }
+        else
+        {
+            tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
+        }
 
         // Prüfen, ob der Dino bereits getamed wurde
-        if (tamedDinos.Contains(currentDino))
+        if (tamedDinos.ContainsKey(currentDino))
         {
             CPH.LogWarn($"[DinoTame] {user} hat den Dino {currentDino} bereits getamed.");
             return false;
         }
 
         // Dino hinzufügen
-        tamedDinos.Add(currentDino);
-        CPH.SetTwitchUserVar(user, "dinoTame_TamedDinos", JsonConvert.SerializeObject(tamedDinos), true);
+        tamedDinos.Add(currentDino, new TamedDinoEntry
+        {
+            tame_date = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")
+        });
+
+        string newJson = JsonConvert.SerializeObject(tamedDinos, Formatting.Indented);
+
+        CPH.SetTwitchUserVar(user, "dinoTame_TamedDinos", newJson, true);
         CPH.LogInfo($"[DinoTame] {user} hat den Dino {currentDino} erfolgreich getamed.");
+
+        string filePath = Path.Combine(saveFolderPath, $"{user}.json");
+        if (!Directory.Exists(saveFolderPath))
+        {
+            Directory.CreateDirectory(saveFolderPath);
+        }
+        // Speichern
+        File.WriteAllText(filePath, newJson);
+
         return true;
+
     }
 
     public bool CheckUserTamedDino()
@@ -546,6 +604,10 @@ public class CPHInline : CPHInlineBase
 
     public void ObsOverlay()
     {
+        int obsId = 0;
+        // get OBS ID
+        if ( CPH.ObsIsConnected(1) ) obsId = 1;
+
         if (!isInitialized)
         {
             CPH.LogWarn("[DinoTame] Plugin not initialized. Cannot update OBS overlay.");
@@ -554,19 +616,19 @@ public class CPHInline : CPHInlineBase
 
         if (tamingActive)
         {
-            CPH.ObsSetGdiText(obsSceneName, obsSourceName, currentDino);
-            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChanceTitle, "Spawn Chance:");
-            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChance, currentDinoSpawnChance.ToString("F2") + "%");
-            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChanceTitle, "Tame Chance:");
-            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChance, currentDinoTameChance.ToString("F2") + "%");
-            CPH.ObsSetImageSourceFile(obsSceneName, obsSourceIcon, dinoIconPath + "\\" + currentDinoIcon);
-            CPH.ObsSetBrowserSource(obsSceneName, obsSourceProgressBar, $"file:///{obsSourceProgressBarPath}?duration={tameDuration}");
+            CPH.ObsSetGdiText(obsSceneName, obsSourceName, currentDino, obsId);
+            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChanceTitle, "Spawn Chance:", obsId);
+            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChance, currentDinoSpawnChance.ToString("F2") + "%", obsId);
+            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChanceTitle, "Tame Chance:", obsId);
+            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChance, currentDinoTameChance.ToString("F2") + "%", obsId);
+            CPH.ObsSetImageSourceFile(obsSceneName, obsSourceIcon, dinoIconPath + "\\" + currentDinoIcon, obsId);
+            CPH.ObsSetBrowserSource(obsSceneName, obsSourceProgressBar, $"file:///{obsSourceProgressBarPath}?duration={tameDuration}", obsId);
 
-            CPH.ObsShowSource(obsSceneName, obsSourceGroup);
+            CPH.ObsShowSource(obsSceneName, obsSourceGroup, obsId);
         }
         else if (!tamingActive)
         {
-            CPH.ObsHideSource(obsSceneName, obsSourceGroup);
+            CPH.ObsHideSource(obsSceneName, obsSourceGroup, obsId);
         }
         else
         {
@@ -603,6 +665,11 @@ public class CPHInline : CPHInlineBase
         string requestUser = args["user"].ToString();
         CPH.TryGetArg("input0", out string targetUser);
         string message = string.Empty;
+
+        if (CPH.GetGlobalVar<string>("dinoTame_FightRequest", false) != null)
+        {
+            return false;
+        }
 
         if (GetUserTamedDinoCount() <= 0)
         {
@@ -682,16 +749,21 @@ public class CPHInline : CPHInlineBase
         CPH.SendMessage(message);
 
         CPH.EnableTimer("[DinoTame] Fight Request Timer");
-        CPH.SetTwitchUserVar(targetUser, "dinoTame_FightRequest", requestUser, false);
-        CPH.SetTwitchUserVar(targetUser, "dinoTame_FightDino", targetUserDino, false);
-        CPH.SetTwitchUserVar(requestUser, "dinoTame_FightDino", requestUserDino, false);
+        CPH.SetGlobalVar("dinoTame_FightTarget", targetUser, false);
+        CPH.SetGlobalVar("dinoTame_FightRequest", requestUser, false);
+        CPH.SetGlobalVar("dinoTame_FightDinoTarget", targetUserDino, false);
+        CPH.SetGlobalVar("dinoTame_FightDinoRequest", requestUserDino, false);
         return true;
     }
 
     public bool FightAnswer()
     {
-        string targetUser = args["user"].ToString();
-        string requestUser = CPH.GetTwitchUserVar<string>(targetUser, "dinoTame_FightRequest", false);
+        if ( !CPH.TryGetArg("user", out string targetUser))
+        {
+            targetUser = CPH.GetGlobalVar<string>("dinoTame_FightRequest", false);
+        }
+
+        string requestUser = CPH.GetGlobalVar<string>("dinoTame_FightRequest", false);
 
         if (string.IsNullOrEmpty(requestUser))
         {
@@ -734,13 +806,21 @@ public class CPHInline : CPHInlineBase
                     { "requestUser", requestUser }
                 });
             }
-            CPH.UnsetTwitchUserVar(targetUser, "dinoTame_FightRequest", false);
+            CPH.UnsetGlobalVar("dinoTame_FightRequest", false);
+            CPH.UnsetGlobalVar("dinoTame_FightTarget", false);
+            CPH.UnsetGlobalVar("dinoTame_FightDinoTarget", false);
+            CPH.UnsetGlobalVar("dinoTame_FightDinoRequest", false);
             CPH.SendMessage(message);
             return true;
         }
-        else if (command == "[DinoTame] Fight Reject" || triggerName == "Timed Actions")
+        else if (triggerName == "Timed Actions" || command == "[DinoTame] Fight Reject")
         {
-            CPH.UnsetTwitchUserVar(targetUser, "dinoTame_FightRequest", false);
+            targetUser = CPH.GetGlobalVar<string>("dinoTame_FightTarget", false);
+
+            CPH.UnsetGlobalVar("dinoTame_FightRequest", false);
+            CPH.UnsetGlobalVar("dinoTame_FightTarget", false);
+            CPH.UnsetGlobalVar("dinoTame_FightDinoTarget", false);
+            CPH.UnsetGlobalVar("dinoTame_FightDinoRequest", false);
             CPH.TryGetArg("fightMessageReject", out string message);
             message = ReplaceWithArgs(message, new Dictionary<string, object>
             {
@@ -766,10 +846,10 @@ public class CPHInline : CPHInlineBase
             return string.Empty;
         }
 
-        List<string> tamedDinos = JsonConvert.DeserializeObject<List<string>>(json);
+        Dictionary<string, TamedDinoEntry> tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
         //Random rnd = new Random();
         int index = rnd.Next(tamedDinos.Count);
-        return tamedDinos[index];
+        return tamedDinos.ElementAt(index).Key;
     }
 
     public int FightResult(string requestUser, string targetUser)
@@ -785,7 +865,7 @@ public class CPHInline : CPHInlineBase
         CPH.LogInfo($"[DinoTame] Fight: {requestUser} ({userDinoName} HP:{requestUserDino.health} DMG:{requestUserDino.damage}) vs {targetUser} ({targetUserDinoName} HP:{targetUserDino.health} DMG:{targetUserDino.damage})");
 
         CPH.TryGetArg("fightMessageAccept", out string message);
-            message = ReplaceWithArgs(message, new Dictionary<string, object>
+        message = ReplaceWithArgs(message, new Dictionary<string, object>
             {
                 { "requestUser", requestUser },
                 { "targetUser", targetUser },
@@ -796,7 +876,7 @@ public class CPHInline : CPHInlineBase
                 { "requestUserDinoDamage", requestUserDino.damage },
                 { "targetUserDinoDamage", targetUserDino.damage }
             });
-            CPH.SendMessage(message);
+        CPH.SendMessage(message);
 
         while (requestUserDinoHealth > 0 && targetUserDinoHealth > 0)
         {
@@ -833,7 +913,7 @@ public class CPHInline : CPHInlineBase
         {
             return -1; // Target user wins
         }
-        
+
 
     }
 
@@ -841,8 +921,49 @@ public class CPHInline : CPHInlineBase
     {
         //Random rnd = new Random();
         int chance = rnd.Next(1, 101);
-		CPH.LogInfo($"[DinoTame] Fight Crit Chance Roll: {chance} (Crit Chance: {critChance})");
+        CPH.LogInfo($"[DinoTame] Fight Crit Chance Roll: {chance} (Crit Chance: {critChance})");
         return chance <= critChance;
     }
+
+    private void RunGitCommand(string arguments)
+    {
+
+        string RepoPath = @"C:\Users\rumsp\Documents\GitHub\DinoTamedViewer";
+
+        var psi = new ProcessStartInfo
+        {
+            FileName = "git",
+            Arguments = arguments,
+            WorkingDirectory = RepoPath,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true,
+        };
+
+        using var process = Process.Start(psi);
+        process.WaitForExit();
+
+        string output = process.StandardOutput.ReadToEnd();
+        string error = process.StandardError.ReadToEnd();
+
+        if (process.ExitCode != 0)
+        {
+            Console.WriteLine($"Git-Fehler bei '{arguments}': {error}");
+        }
+        else
+        {
+            Console.WriteLine($"Git-Ausgabe '{arguments}': {output}");
+        }
+    }
+
+    public void AutoCommitAndPush()
+    {
+        string message = $"Automatischer Commit am {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
+        RunGitCommand("add .");
+        RunGitCommand($"commit -m \"{message}\"");
+        RunGitCommand("push");
+    }
+
 
 }

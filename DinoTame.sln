@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catch Dinos", "DinoTame.csproj", "{5F61E276-AFB2-4396-AB56-636BD75435B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Witze", "..\Witze\Witze.csproj", "{1F3BCD8D-551A-4E45-ADF1-EEDDD4030597}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{5F61E276-AFB2-4396-AB56-636BD75435B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F61E276-AFB2-4396-AB56-636BD75435B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F61E276-AFB2-4396-AB56-636BD75435B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F3BCD8D-551A-4E45-ADF1-EEDDD4030597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3BCD8D-551A-4E45-ADF1-EEDDD4030597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3BCD8D-551A-4E45-ADF1-EEDDD4030597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3BCD8D-551A-4E45-ADF1-EEDDD4030597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
