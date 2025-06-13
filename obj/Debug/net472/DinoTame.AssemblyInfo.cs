@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DinoTame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a431414b7231e9a2fe8468e1db4e97c905e0773b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+314e1cce35e468be38a857d594af56aad51a5001")]
 [assembly: System.Reflection.AssemblyProductAttribute("DinoTame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DinoTame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
