@@ -56,6 +56,10 @@ public class CPHInline : CPHInlineBase
     public class TamedDinoEntry
     {
         public string tame_date { get; set; }
+        public double health { get; set; }
+        public double damage { get; set; }
+        public int win { get; set; }
+        public int lose { get; set; }
     }
 
     class TameEntry
@@ -177,6 +181,11 @@ public class CPHInline : CPHInlineBase
         CPH.LogInfo($"[DinoTame] Initialized");
         isInitialized = true;
         return true;
+    }
+    public DinoEntry GetDinoByName(string name)
+    {
+        // Suche den Dino in der Liste (Groß-/Kleinschreibung ignorieren)
+        return dinoList.FirstOrDefault(d => d.name.Equals(name, StringComparison.OrdinalIgnoreCase));
     }
 
     public bool SelectRandomDino()
@@ -401,10 +410,10 @@ public class CPHInline : CPHInlineBase
 
         //Random rnd = new Random();
         List<string> winners = new();
-        double roll = rnd.NextDouble() * 100;
 
         foreach (var entry in tameEntries)
         {
+            double roll = rnd.NextDouble() * 100;
             string user = entry.user;
             string kibble = entry.kibbleType.ToLower();
             if (!kibbleBonus.TryGetValue(kibble, out double bonus))
@@ -517,19 +526,8 @@ public class CPHInline : CPHInlineBase
         }
 
         // Aktuelle Tamed Dinos des Users abrufen
-        string json = CPH.GetTwitchUserVar<string>(user, "dinoTame_TamedDinos", true);
-        Dictionary<string, TamedDinoEntry> tamedDinos;
-        
-        if (string.IsNullOrWhiteSpace(json))
-        {
-            tamedDinos = new Dictionary<string, TamedDinoEntry>();
-        }
-        else
-        {
-            tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
-        }
+        Dictionary<string, TamedDinoEntry> tamedDinos = DeserializeUserTamedDinos(user);
 
-        // Prüfen, ob der Dino bereits getamed wurde
         if (tamedDinos.ContainsKey(currentDino))
         {
             CPH.LogWarn($"[DinoTame] {user} hat den Dino {currentDino} bereits getamed.");
@@ -537,15 +535,38 @@ public class CPHInline : CPHInlineBase
         }
 
         // Dino hinzufügen
+        DinoEntry currentDinoValue = GetDinoByName(currentDino);
         tamedDinos.Add(currentDino, new TamedDinoEntry
         {
-            tame_date = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")
+            tame_date = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss"),
+            health = GetDinoStatValueMultiplier(currentDinoValue.health),
+            damage = GetDinoStatValueMultiplier(currentDinoValue.damage),
+            win = 0,
+            lose = 0
         });
 
-        string newJson = JsonConvert.SerializeObject(tamedDinos, Formatting.Indented);
-
-        CPH.SetTwitchUserVar(user, "dinoTame_TamedDinos", newJson, true);
+        SerializeUserTamedDinos(user, tamedDinos);
         CPH.LogInfo($"[DinoTame] {user} hat den Dino {currentDino} erfolgreich getamed.");
+        return true;
+    }
+
+    public Dictionary<string, TamedDinoEntry> DeserializeUserTamedDinos(string user)
+    {
+        string json = CPH.GetTwitchUserVar<string>(user, "dinoTame_TamedDinos", true);
+        if (string.IsNullOrEmpty(json) || json == "[]")
+        {
+            CPH.LogInfo($"[DinoTame] {user} hat keine getamten Dinos.");
+            return new Dictionary<string, TamedDinoEntry>();
+        }
+
+        Dictionary<string, TamedDinoEntry> tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
+        return tamedDinos;
+    }
+
+    public bool SerializeUserTamedDinos(string user, Dictionary<string, TamedDinoEntry> tamedDinos)
+    {
+        string json = JsonConvert.SerializeObject(tamedDinos, Formatting.Indented, new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Include });
+        CPH.SetTwitchUserVar(user, "dinoTame_TamedDinos", json, true);
 
         string filePath = Path.Combine(saveFolderPath, $"{user}.json");
         if (!Directory.Exists(saveFolderPath))
@@ -553,12 +574,45 @@ public class CPHInline : CPHInlineBase
             Directory.CreateDirectory(saveFolderPath);
         }
         // Speichern
-        File.WriteAllText(filePath, newJson);
+        File.WriteAllText(filePath, json);
 
         return true;
-
     }
+    public double GetDinoStatValueMultiplier(double baseValue)
+    {
+        double multiplier = 1.0;
 
+        if (baseValue >= 10000)
+        {
+            multiplier = RandomStatMultiplier(0.1, 0.5);
+        }
+        else if (baseValue >= 1000 && baseValue < 10000)
+        {
+            multiplier = RandomStatMultiplier(0.5, 1.5);
+        }
+        else if (baseValue >= 100 && baseValue < 1000)
+        {
+            multiplier = RandomStatMultiplier(1.0, 3.0);
+        }
+        else if (baseValue >= 10 && baseValue < 100)
+        {
+            multiplier = RandomStatMultiplier(5.0, 15.0);
+        }
+        else if (baseValue >= 1 && baseValue < 10)
+        {
+            multiplier = RandomStatMultiplier(5.0, 20.0);
+        }
+
+        return Math.Round(baseValue * multiplier);
+    }
+    public double RandomStatMultiplier(double min = 0.5, double max = 1.5)
+    {
+        double multiplier = 1.0;
+
+        multiplier = rnd.NextDouble() * (max - min) + min;
+
+        return multiplier;
+    }
     public bool CheckUserTamedDino()
     {
         string user = args["user"].ToString();
@@ -606,7 +660,7 @@ public class CPHInline : CPHInlineBase
     {
         int obsId = 0;
         // get OBS ID
-        if ( CPH.ObsIsConnected(1) ) obsId = 1;
+        if (CPH.ObsIsConnected(1)) obsId = 1;
 
         if (!isInitialized)
         {
@@ -758,7 +812,7 @@ public class CPHInline : CPHInlineBase
 
     public bool FightAnswer()
     {
-        if ( !CPH.TryGetArg("user", out string targetUser))
+        if (!CPH.TryGetArg("user", out string targetUser))
         {
             targetUser = CPH.GetGlobalVar<string>("dinoTame_FightRequest", false);
         }
@@ -778,6 +832,9 @@ public class CPHInline : CPHInlineBase
             CPH.DisableTimer("[DinoTame] Fight Request Timer");
             int result = FightResult(requestUser, targetUser);
 
+            Dictionary<string, TamedDinoEntry> requestUserTamedDinos = DeserializeUserTamedDinos(requestUser);
+            Dictionary<string, TamedDinoEntry> targetUserTamedDinos = DeserializeUserTamedDinos(targetUser);
+
             string message;
             if (result == 0)
             {
@@ -787,6 +844,10 @@ public class CPHInline : CPHInlineBase
                     { "targetUser", targetUser },
                     { "requestUser", requestUser }
                 });
+
+                // Update win/lose counts
+                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].lose++;
+                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].lose++;
             }
             else if (result == 1)
             {
@@ -796,6 +857,10 @@ public class CPHInline : CPHInlineBase
                     { "targetUser", targetUser },
                     { "requestUser", requestUser }
                 });
+
+                // Update win/lose counts
+                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].win++;
+                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].lose++;
             }
             else
             {
@@ -805,12 +870,23 @@ public class CPHInline : CPHInlineBase
                     { "targetUser", targetUser },
                     { "requestUser", requestUser }
                 });
+
+                // Update win/lose counts
+                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].lose++;
+                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].win++;
             }
+
+            // Serialize updated tamed dinos back to user vars
+            SerializeUserTamedDinos(requestUser, requestUserTamedDinos);
+            SerializeUserTamedDinos(targetUser, targetUserTamedDinos);
+            CPH.LogInfo($"[DinoTame] Fight result: {requestUser} vs {targetUser} - Result: {result}");
+
             CPH.UnsetGlobalVar("dinoTame_FightRequest", false);
             CPH.UnsetGlobalVar("dinoTame_FightTarget", false);
             CPH.UnsetGlobalVar("dinoTame_FightDinoTarget", false);
             CPH.UnsetGlobalVar("dinoTame_FightDinoRequest", false);
             CPH.SendMessage(message);
+            AutoCommitAndPush();
             return true;
         }
         else if (triggerName == "Timed Actions" || command == "[DinoTame] Fight Reject")
@@ -846,7 +922,7 @@ public class CPHInline : CPHInlineBase
             return string.Empty;
         }
 
-        Dictionary<string, TamedDinoEntry> tamedDinos = JsonConvert.DeserializeObject<Dictionary<string, TamedDinoEntry>>(json);
+        Dictionary<string, TamedDinoEntry> tamedDinos = DeserializeUserTamedDinos(user);
         //Random rnd = new Random();
         int index = rnd.Next(tamedDinos.Count);
         return tamedDinos.ElementAt(index).Key;
@@ -854,15 +930,18 @@ public class CPHInline : CPHInlineBase
 
     public int FightResult(string requestUser, string targetUser)
     {
-        string userDinoName = CPH.GetTwitchUserVar<string>(requestUser, "dinoTame_FightDino", false);
-        string targetUserDinoName = CPH.GetTwitchUserVar<string>(targetUser, "dinoTame_FightDino", false);
-        var requestUserDino = dinoList.Find(d => d.name.Equals(userDinoName, StringComparison.OrdinalIgnoreCase));
-        var targetUserDino = dinoList.Find(d => d.name.Equals(targetUserDinoName, StringComparison.OrdinalIgnoreCase));
+        string userDinoName = CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false);
+        string targetUserDinoName = CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false);
 
-        double requestUserDinoHealth = requestUserDino.health;
-        double targetUserDinoHealth = targetUserDino.health;
+        Dictionary<string, TamedDinoEntry> requestUserTamedDinos = DeserializeUserTamedDinos(requestUser);
+        Dictionary<string, TamedDinoEntry> targetUserTamedDinos = DeserializeUserTamedDinos(targetUser);
 
-        CPH.LogInfo($"[DinoTame] Fight: {requestUser} ({userDinoName} HP:{requestUserDino.health} DMG:{requestUserDino.damage}) vs {targetUser} ({targetUserDinoName} HP:{targetUserDino.health} DMG:{targetUserDino.damage})");
+        double requestUserDinoHealth = requestUserTamedDinos[userDinoName].health;
+        double targetUserDinoHealth = targetUserTamedDinos[targetUserDinoName].health;
+        double requestUserDinoDamage = requestUserTamedDinos[userDinoName].damage;
+        double targetUserDinoDamage = targetUserTamedDinos[targetUserDinoName].damage;
+
+        CPH.LogInfo($"[DinoTame] Fight: {requestUser} ({userDinoName} HP:{requestUserDinoHealth} DMG:{requestUserDinoDamage}) vs {targetUser} ({targetUserDinoName} HP:{targetUserDinoHealth} DMG:{targetUserDinoDamage})");
 
         CPH.TryGetArg("fightMessageAccept", out string message);
         message = ReplaceWithArgs(message, new Dictionary<string, object>
@@ -873,31 +952,31 @@ public class CPHInline : CPHInlineBase
                 { "targetUserDino", targetUserDinoName },
                 { "requestUserDinoHealth", requestUserDinoHealth },
                 { "targetUserDinoHealth", targetUserDinoHealth },
-                { "requestUserDinoDamage", requestUserDino.damage },
-                { "targetUserDinoDamage", targetUserDino.damage }
+                { "requestUserDinoDamage", requestUserDinoDamage },
+                { "targetUserDinoDamage", targetUserDinoDamage }
             });
         CPH.SendMessage(message);
 
         while (requestUserDinoHealth > 0 && targetUserDinoHealth > 0)
         {
-            double fightCritDmg = 1.1; // Crit damage multiplier
+            double fightCritDmg = 3; // Crit damage multiplier
             bool userCrit = false;
             bool targetUserCrit = false;
-            double requestUserDinoDamage = requestUserDino.damage;
-            double targetUserDinoDamage = targetUserDino.damage;
+            double requestUserDinoDamage2 = requestUserDinoDamage;
+            double targetUserDinoDamage2 = targetUserDinoDamage;
 
             if (FightCritChance())
             {
-                requestUserDinoDamage *= fightCritDmg; // Crit damage
+                requestUserDinoDamage2 *= fightCritDmg; // Crit damage
                 userCrit = true;
             }
             if (FightCritChance())
             {
-                targetUserDinoDamage *= fightCritDmg; // Crit damage
+                targetUserDinoDamage2 *= fightCritDmg; // Crit damage
                 targetUserCrit = true;
             }
-            targetUserDinoHealth -= requestUserDinoDamage;
-            requestUserDinoHealth -= targetUserDinoDamage;
+            targetUserDinoHealth -= requestUserDinoDamage2;
+            requestUserDinoHealth -= targetUserDinoDamage2;
             CPH.LogInfo($"[DinoTame] {requestUser} ({requestUserDinoHealth} HP {userCrit}) vs {targetUser} ({targetUserDinoHealth} HP {targetUserCrit})");
         }
 
@@ -917,7 +996,7 @@ public class CPHInline : CPHInlineBase
 
     }
 
-    public bool FightCritChance(int critChance = 50)
+    public bool FightCritChance(int critChance = 25)
     {
         //Random rnd = new Random();
         int chance = rnd.Next(1, 101);
@@ -965,5 +1044,52 @@ public class CPHInline : CPHInlineBase
         RunGitCommand("push");
     }
 
+    public bool UpdateTamedDinos()
+    {
+        List<UserVariableValue<string>> userVarList = CPH.GetTwitchUsersVar<string>("dinoTame_TamedDinos", true);
 
+        foreach (UserVariableValue<string> userVar in userVarList)
+        {
+            string user = userVar.UserName;
+            Dictionary<string, TamedDinoEntry> tamedDinos = DeserializeUserTamedDinos(user);
+            if (tamedDinos.Count == 0)
+            {
+                CPH.LogInfo($"[DinoTame] {user} has no tamed dinos to update.");
+            }
+            CPH.SetTwitchUserVar(user, "dinoTame_TamedDinos_backup", userVar.Value, true);
+
+            bool updated = false;
+            // Update each dino's stats
+            foreach (var entry in tamedDinos)
+            {
+                var dinoName = entry.Key;
+                var dinoEntry = GetDinoByName(dinoName);
+                if (dinoEntry != null)
+                {
+                    if (entry.Value.health == 0)
+                    {
+                        entry.Value.health = GetDinoStatValueMultiplier(dinoEntry.health);
+                        updated = true;
+                    }
+
+                    if (entry.Value.damage == 0)
+                    {
+                        entry.Value.damage = GetDinoStatValueMultiplier(dinoEntry.damage);
+                        updated = true;
+                    }
+                }
+
+                if (updated)
+                {
+                    SerializeUserTamedDinos(user, tamedDinos);
+                    CPH.LogInfo($"[DinoTame] {user}'s tamed dinos have been updated (missing stats added).");
+                }
+                else
+                {
+                    CPH.LogInfo($"[DinoTame] {user}'s tamed dinos already have all stats set.");
+                }
+            }
+        }
+        return true;
+    }
 }
