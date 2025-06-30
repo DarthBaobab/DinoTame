@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using System.Globalization;
 
+
 public class CPHInline : CPHInlineBase
 {
     private static readonly Random rnd = new Random();
@@ -70,13 +71,13 @@ public class CPHInline : CPHInlineBase
         public string kibbleType { get; set; }
     }
     public class FighterEntry
-        {
-            public string user { get; set; }
-            public string dino { get; set; }
-            public double currentHealth { get; set; }
-            public double maxHealth { get; set; }
-            public double damage { get; set; }
-        }
+    {
+        public string user { get; set; }
+        public string dino { get; set; }
+        public double currentHealth { get; set; }
+        public double maxHealth { get; set; }
+        public double damage { get; set; }
+    }
     public bool Execute()
     {
         // get OBS ID
@@ -233,9 +234,9 @@ public class CPHInline : CPHInlineBase
     }
     public bool SpawnDino()
     {
-        if (!CPH.ObsIsStreaming(obsId))
+        if (!isStreamLive())
         {
-            CPH.LogWarn("[DinoTame] OBS is not streaming.");
+            CPH.LogWarn("[DinoTame] Stream offline.");
             return false;
         }
 
@@ -253,7 +254,6 @@ public class CPHInline : CPHInlineBase
 
         CPH.LogInfo($"[DinoTame] Spawning dino: {currentDino}");
         tamingActive = true;
-        //ObsOverlay();
 
         DinoEntry currentDinoValue = GetDinoByName(currentDino);
 
@@ -317,6 +317,42 @@ public class CPHInline : CPHInlineBase
         CPH.LogInfo($"[DinoTame] Buy Egg Paste {user} | {eggPaste - eggPasteAmountToAdd} | +{eggPasteAmountToAdd} | {eggPaste}");
         return true;
     }
+    public bool AddWatchEggPaste()
+        {
+            List<Dictionary<string,object>> users = (List<Dictionary<string,object>>)args["users"]; 
+            CPH.TryGetArg("isLive", out bool live);
+            long? eggPaste;
+            long? watchTime;
+            string userId;
+            int eggPasteAmountToAdd = args.ContainsKey("eggPasteAmountToAdd") ? int.Parse(args["eggPasteAmountToAdd"].ToString()) : 5;
+            int eggPasteMinutes = 60;
+
+            if (live)
+            {
+                for (int i = 0; i < users.Count; i++)
+                {
+                    // Read in current points and add 1
+                    userId = users[i]["id"].ToString();
+                    string userName = users[i]["userName"].ToString();
+
+                    watchTime = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_watch_time", false);
+                    watchTime ??= 0; // Wenn watchTime null ist, setze es auf 0
+                    watchTime += 1;
+                    CPH.SetTwitchUserVar(userName, "dinoTame_watch_time", watchTime, false);
+
+                    // Wenn watchTime durch eggPasteMinutes ohne Rest teilbar ist (also ein Vielfaches), dann...
+                    if (watchTime % eggPasteMinutes == 0)
+                    {
+                        // Hier kannst du beliebige Aktionen ausführen, z.B. eine Nachricht senden oder einen Bonus geben
+                        CPH.LogInfo($"[DinoTame] {userName} hat {watchTime} Minuten Watchtime erreicht (Vielfaches von {eggPasteMinutes}).");
+                        eggPaste = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_egg_paste", true);
+                        eggPaste += eggPasteAmountToAdd * (watchTime / eggPasteMinutes);
+                        CPH.SetTwitchUserVar(userName, "dinoTame_egg_paste", eggPaste, true);
+                    }
+                }
+            }
+            return true;
+        }
     public string ReplaceWithArgs(string input, Dictionary<string, object> args)
     {
         if (string.IsNullOrEmpty(input) || args == null || args.Count == 0)
@@ -416,7 +452,6 @@ public class CPHInline : CPHInlineBase
     {
         double baseTameChance = currentDinoTameChance;
         tamingActive = false;
-        ObsOverlay();
         CPH.DisableTimer("[DinoTame] Tame Duration");
 
         if (string.IsNullOrEmpty(currentDino))
@@ -685,39 +720,6 @@ public class CPHInline : CPHInlineBase
         CPH.SendMessage(message);
         return true;
     }
-    public void ObsOverlay()
-    {
-        int obsId = 0;
-        // get OBS ID
-        if (CPH.ObsIsConnected(1)) obsId = 1;
-
-        if (!isInitialized)
-        {
-            CPH.LogWarn("[DinoTame] Plugin not initialized. Cannot update OBS overlay.");
-            return;
-        }
-
-        if (tamingActive)
-        {
-            CPH.ObsSetGdiText(obsSceneName, obsSourceName, currentDino, obsId);
-            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChanceTitle, "Spawn Chance:", obsId);
-            CPH.ObsSetGdiText(obsSceneName, obsSourceSpawnChance, currentDinoSpawnChance.ToString("F2") + "%", obsId);
-            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChanceTitle, "Tame Chance:", obsId);
-            CPH.ObsSetGdiText(obsSceneName, obsSourceTameChance, currentDinoTameChance.ToString("F2") + "%", obsId);
-            CPH.ObsSetImageSourceFile(obsSceneName, obsSourceIcon, dinoIconPath + "\\" + currentDinoIcon, obsId);
-            CPH.ObsSetBrowserSource(obsSceneName, obsSourceProgressBar, $"file:///{obsSourceProgressBarPath}?duration={tameDuration}", obsId);
-
-            CPH.ObsShowSource(obsSceneName, obsSourceGroup, obsId);
-        }
-        else if (!tamingActive)
-        {
-            CPH.ObsHideSource(obsSceneName, obsSourceGroup, obsId);
-        }
-        else
-        {
-            CPH.LogError("[DinoTame] OBS overlay cannot be updated.");
-        }
-    }
     public bool GetKibble()
     {
         string message = string.Empty;
@@ -872,8 +874,8 @@ public class CPHInline : CPHInlineBase
                 });
 
                 // Update win/lose counts
-                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].lose++;
-                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].lose++;
+                UpdateWinLoseCounts(requestUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false), false);
+                UpdateWinLoseCounts(targetUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false), false);
             }
             else if (result == 1)
             {
@@ -885,8 +887,8 @@ public class CPHInline : CPHInlineBase
                 });
 
                 // Update win/lose counts
-                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].win++;
-                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].lose++;
+                UpdateWinLoseCounts(requestUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false), true);
+                UpdateWinLoseCounts(targetUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false), false);
             }
             else
             {
@@ -898,8 +900,8 @@ public class CPHInline : CPHInlineBase
                 });
 
                 // Update win/lose counts
-                requestUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false)].lose++;
-                targetUserTamedDinos[CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false)].win++;
+                UpdateWinLoseCounts(requestUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoRequest", false), false);
+                UpdateWinLoseCounts(targetUser, CPH.GetGlobalVar<string>("dinoTame_FightDinoTarget", false), true);
             }
 
             // Serialize updated tamed dinos back to user vars
@@ -937,6 +939,21 @@ public class CPHInline : CPHInlineBase
             CPH.LogWarn($"[DinoTame] Unknown command: {command}");
             return false;
         }
+    }
+    public void UpdateWinLoseCounts(string user, string dino, bool isWin)
+    {
+        Dictionary<string, TamedDinoEntry> userTamedDinos = DeserializeUserTamedDinos(user);
+
+        if (isWin)
+        {
+            userTamedDinos[dino].win++;
+        }
+        else
+        {
+            userTamedDinos[dino].lose++;
+        }
+
+        SerializeUserTamedDinos(user, userTamedDinos);
     }
     public string GetRandomTamedDino(string user)
     {
@@ -1131,6 +1148,7 @@ public class CPHInline : CPHInlineBase
         arenaOpen = false;
         CPH.DisableTimer("[DinoTame] Arena Entry Timer");
         string message = string.Empty;
+        int pot = CPH.GetGlobalVar<int>("DinoTame_ArenaPot", false);
         string json = CPH.GetGlobalVar<string>("DinoTame_Fighters", false);
         Dictionary<string, FighterEntry> fighters = JsonConvert.DeserializeObject<Dictionary<string, FighterEntry>>(json);
         json = null;
@@ -1140,6 +1158,7 @@ public class CPHInline : CPHInlineBase
             CPH.LogWarn("[DinoTame] Not enough fighters to start the arena fight.");
             CPH.TryGetArg("fighterArenaNotEnoughFightersMessage", out message);
             CPH.SendMessage(message);
+            CPH.SetTwitchUserVar(fighters.First().Value.user, "dinoTame_egg_paste", CPH.GetTwitchUserVar<int>(fighters.First().Value.user, "dinoTame_egg_paste", true) + pot, true);
             clearFighters(300);
             return false;
         }
@@ -1196,6 +1215,7 @@ public class CPHInline : CPHInlineBase
                 {
                     CPH.LogInfo($"[DinoTame] Fighter {randomFighter.Value.user} ({randomFighter.Value.dino}) was defeated.");
                     aliveFighters.Remove(randomFighter.Key);
+                    UpdateWinLoseCounts(randomFighter.Value.user, randomFighter.Value.dino, false);
                     //continue;
                 }
                 CPH.LogInfo("[DinoTame] Waiting for next fighter action...");
@@ -1211,9 +1231,16 @@ public class CPHInline : CPHInlineBase
             message = ReplaceWithArgs(message, new Dictionary<string, object>
             {
                 { "user", winner.Value.user },
-                { "dino", winner.Value.dino }
+                { "dino", winner.Value.dino },
+                { "fighterArenaPot", pot}
             });
             CPH.SendMessage(message);
+            UpdateWinLoseCounts(winner.Value.user, winner.Value.dino, true);
+            int winnerCurrentEggPaste = CPH.GetTwitchUserVar<int>(winner.Value.user, "dinoTame_egg_paste", true);
+            int winnerNewEggPaste = winnerCurrentEggPaste + pot;
+            CPH.SetTwitchUserVar(winner.Value.user, "dinoTame_egg_paste", winnerNewEggPaste, true);
+            CPH.SetGlobalVar("DinoTame_ArenaPot", 0, false);
+
         }
         else
         {
@@ -1230,6 +1257,7 @@ public class CPHInline : CPHInlineBase
         string message = string.Empty;
         CPH.TryGetArg("userId", out string userId);
         CPH.TryGetArg("user", out string user);
+        CPH.TryGetArg("fighterArenaEggPasteCost", out int eggPasteCost);
 
         if (!arenaOpen)
         {
@@ -1268,6 +1296,27 @@ public class CPHInline : CPHInlineBase
             });
             CPH.SendMessage(message);
             return false;
+        }
+
+        if (eggPasteCost > 0)
+        {
+            int eggPaste = CPH.GetTwitchUserVar<int>(user, "dinoTame_egg_paste", true);
+            if (eggPaste < eggPasteCost)
+            {
+                CPH.LogWarn($"[DinoTame] {user} does not have enough egg paste to enter the arena.");
+                CPH.TryGetArg("fighterArenaNotEnoughEggPasteMessage", out message);
+                message = ReplaceWithArgs(message, new Dictionary<string, object>
+                {
+                    { "user", user },
+                    { "eggPasteCost", eggPasteCost },
+                    { "eggPaste", eggPaste }
+                });
+                CPH.SendMessage(message);
+                return false;
+            }
+            CPH.SetTwitchUserVar(user, "dinoTame_egg_paste", eggPaste - eggPasteCost, true);
+            int arenaPot = Math.Max(CPH.GetGlobalVar<int>("DinoTame_ArenaPot", false), 0);
+            CPH.SetGlobalVar("DinoTame_ArenaPot", arenaPot + eggPasteCost, false);
         }
 
         if (fighters == null || fighters.Count == 0)
@@ -1319,7 +1368,7 @@ public class CPHInline : CPHInlineBase
         CPH.SetGlobalVar("DinoTame_Fighters", json, false);
         return true;
     }
-    public bool updateFighter(string attackerId, string defenderId, FighterEntry updatedFighter,double dmg, bool crit = false)
+    public bool updateFighter(string attackerId, string defenderId, FighterEntry updatedFighter, double dmg, bool crit = false)
     {
         if (updatedFighter == null)
         {
@@ -1353,6 +1402,11 @@ public class CPHInline : CPHInlineBase
         CPH.UnsetGlobalVar("DinoTame_Fighters", false);
         CPH.WebsocketBroadcastJson("{\"type\":\"clearFighters\"}");
         return true;
+    }
+    public bool isStreamLive()
+    {
+        // Check if the stream is live
+        return CPH.GetGlobalVar<bool>("isLive", false);
     }
     
 }
