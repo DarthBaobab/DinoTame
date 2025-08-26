@@ -486,6 +486,35 @@ public class CPHInline : CPHInlineBase
         CPH.SendMessage(message);
         return true;
     }
+    public bool SetUserDefaultKibble()
+    {
+        string user = args["user"].ToString();
+        string input = args["rawInput"].ToString().ToLowerInvariant();
+        string message;
+        if (string.IsNullOrEmpty(input))
+        {
+            input = "basic"; // Default Kibble-Typ
+        }
+        if (!kibbleCosts.ContainsKey(input))
+        {
+            CPH.TryGetArg("setDefaultKibbleMessageInvalidType", out message);
+            message = ReplaceWithArgs(message, new Dictionary<string, object>
+            {
+                { "user", user }
+            });
+            CPH.SendMessage(message);
+            return false;
+        }
+        CPH.TryGetArg("setDefaultKibbleMessageSuccess", out message);
+        message = ReplaceWithArgs(message, new Dictionary<string, object>
+        {
+            { "user", user },
+            { "input", input }
+        });
+        CPH.SendMessage(message);
+        CPH.SetTwitchUserVar(user, "dinoTame_kibble_type", input, true);
+        return true;
+    }
     public bool EvaluateTaming()
     {
         double baseTameChance = currentDinoTameChance;
