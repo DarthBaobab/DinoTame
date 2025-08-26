@@ -83,6 +83,8 @@ public class CPHInline : CPHInlineBase
     {
         // get OBS ID
         if (CPH.ObsIsConnected(1)) obsId = 1;
+        // Make broadcaster available globally in the script
+        broadcaster = CPH.TwitchGetBroadcaster();
 
         CPH.TryGetArg("tameDuration", out tameDuration);
         CPH.TryGetArg("obsSceneName", out obsSceneName);
@@ -319,41 +321,61 @@ public class CPHInline : CPHInlineBase
         return true;
     }
     public bool AddWatchEggPaste()
+    {
+        List<Dictionary<string,object>> users = (List<Dictionary<string,object>>)args["users"]; 
+        CPH.TryGetArg("isLive", out bool live);
+        long? eggPaste;
+        long? watchTime;
+        string userId;
+        int eggPasteAmountToAdd = args.ContainsKey("eggPasteAmountToAdd") ? int.Parse(args["eggPasteAmountToAdd"].ToString()) : 1;
+        int eggPasteMinutes = 60;
+
+        List<UserVariableValue<string>> userVarList = CPH.GetTwitchUsersVar<string>("dinoTame_watch_time", false);
+        List<string> userVarNames = userVarList.Select(u => u.UserName).ToList();
+
+        if (live)
         {
-            List<Dictionary<string,object>> users = (List<Dictionary<string,object>>)args["users"]; 
-            CPH.TryGetArg("isLive", out bool live);
-            long? eggPaste;
-            long? watchTime;
-            string userId;
-            int eggPasteAmountToAdd = args.ContainsKey("eggPasteAmountToAdd") ? int.Parse(args["eggPasteAmountToAdd"].ToString()) : 5;
-            int eggPasteMinutes = 60;
-
-            if (live)
+            for (int i = 0; i < users.Count; i++)
             {
-                for (int i = 0; i < users.Count; i++)
+                // Read in current points and add 1
+                userId = users[i]["id"].ToString();
+                string userName = users[i]["userName"].ToString();
+
+                watchTime = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_watch_time", false);
+                watchTime ??= 0; // Wenn watchTime null ist, setze es auf 0
+                watchTime += 1;
+                if (userVarNames.Contains(userName))
                 {
-                    // Read in current points and add 1
-                    userId = users[i]["id"].ToString();
-                    string userName = users[i]["userName"].ToString();
+                    userVarNames.Remove(userName);
+                }
+                CPH.SetTwitchUserVar(userName, "dinoTame_watch_time", watchTime, false);
 
-                    watchTime = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_watch_time", false);
-                    watchTime ??= 0; // Wenn watchTime null ist, setze es auf 0
-                    watchTime += 1;
-                    CPH.SetTwitchUserVar(userName, "dinoTame_watch_time", watchTime, false);
-
-                    // Wenn watchTime durch eggPasteMinutes ohne Rest teilbar ist (also ein Vielfaches), dann...
-                    if (watchTime % eggPasteMinutes == 0)
-                    {
-                        // Hier kannst du beliebige Aktionen ausführen, z.B. eine Nachricht senden oder einen Bonus geben
-                        CPH.LogInfo($"[DinoTame] {userName} hat {watchTime} Minuten Watchtime erreicht (Vielfaches von {eggPasteMinutes}).");
-                        eggPaste = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_egg_paste", true);
-                        eggPaste += eggPasteAmountToAdd * (watchTime / eggPasteMinutes);
-                        CPH.SetTwitchUserVar(userName, "dinoTame_egg_paste", eggPaste, true);
-                    }
+                // Wenn watchTime durch eggPasteMinutes ohne Rest teilbar ist (also ein Vielfaches), dann...
+                if (watchTime % eggPasteMinutes == 0)
+                {
+                    // Hier kannst du beliebige Aktionen ausführen, z.B. eine Nachricht senden oder einen Bonus geben
+                    CPH.LogInfo($"[DinoTame] {userName} hat {watchTime} Minuten Watchtime erreicht (Vielfaches von {eggPasteMinutes}).");
+                    eggPaste = CPH.GetTwitchUserVar<long?>(userName, "dinoTame_egg_paste", true);
+                    eggPaste += eggPasteAmountToAdd * (watchTime / eggPasteMinutes);
+                    CPH.SetTwitchUserVar(userName, "dinoTame_egg_paste", eggPaste, true);
                 }
             }
-            return true;
+            foreach (var userName in userVarNames)
+            {
+                CPH.UnsetTwitchUserVar(userName, "dinoTame_watch_time", false);
+            }
         }
+        return true;
+    }
+    public bool AddEggPasteFirstWords()
+    {
+        string user = args["user"].ToString();
+        int eggPaste = CPH.GetTwitchUserVar<int>(user, "dinoTame_egg_paste", true);
+        int eggPasteAmountToAdd = args.ContainsKey("eggPasteAmountToAdd") ? int.Parse(args["eggPasteAmountToAdd"].ToString()) : 10;
+        eggPaste += eggPasteAmountToAdd;
+        CPH.SetTwitchUserVar(user, "dinoTame_egg_paste", eggPaste, true);
+        return true;
+    }
     public string ReplaceWithArgs(string input, Dictionary<string, object> args)
     {
         if (string.IsNullOrEmpty(input) || args == null || args.Count == 0)
