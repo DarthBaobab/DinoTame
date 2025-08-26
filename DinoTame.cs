@@ -15,6 +15,7 @@ using System.Globalization;
 
 public class CPHInline : CPHInlineBase
 {
+    private TwitchUserInfo broadcaster;
     private static readonly Random rnd = new Random();
     private List<DinoEntry> dinoList = new List<DinoEntry>();
     private Dictionary<string, int> kibbleCosts;
@@ -494,6 +495,10 @@ public class CPHInline : CPHInlineBase
             }
 
             double finalChance = baseTameChance * bonus;
+            if (user == broadcaster.UserName)
+            {
+                finalChance *= 0.5; // -50% Bonus für den Broadcaster
+            }
             finalChance = Math.Min(finalChance, 100); // Maximal 100%
             bool success = roll <= finalChance;
             CPH.LogInfo($"[DinoTame] {user} | Kibble: {kibble} | Chance: {finalChance:F1}% | Roll: {roll:F1}% | Success: {success}");
