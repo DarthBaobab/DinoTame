@@ -380,7 +380,19 @@ public class CPHInline : CPHInlineBase
     {
         if (string.IsNullOrEmpty(input) || args == null || args.Count == 0)
         {
-            CPH.LogWarn("[DinoTame] ReplaceWithArgs called with empty input or args.");
+            string args2 = null;
+            foreach (var arg in args)
+            {
+                if (string.IsNullOrEmpty(args2))
+                {
+                    args2 = arg.Key + ": " + arg.Value?.ToString();
+                }
+                else
+                {
+                    args2 = "; " + args2 + arg.Key + ": " + arg.Value?.ToString();
+                }
+            }
+            CPH.LogWarn($"[DinoTame] ReplaceWithArgs called with empty input or args. Input: {input}, Args: {args2}");
             return input;
         }
         foreach (var arg in args)
@@ -391,12 +403,6 @@ public class CPHInline : CPHInlineBase
     }
     public bool UseKibbleForTaming()
     {
-        string user = args["user"].ToString();
-        string input = args["rawInput"].ToString().ToLowerInvariant();
-        if (string.IsNullOrEmpty(input))
-        {
-            input = "basic";
-        }
         string message;
         if (!tamingActive)
         {
@@ -404,6 +410,15 @@ public class CPHInline : CPHInlineBase
             CPH.SendMessage(message);
             return false;
         }
+
+        string user = args["user"].ToString();
+        string input = args["rawInput"].ToString().ToLowerInvariant();
+        string defaultKibble = CPH.GetTwitchUserVar<string>(user, "dinoTame_kibble_type", true);
+        if (string.IsNullOrEmpty(input))
+        {
+            input = defaultKibble;
+        }
+
 
         if (GetUserTamedDino())
         {
@@ -764,7 +779,7 @@ public class CPHInline : CPHInlineBase
             {
                 message += "; ";
             }
-            message += ($"{name} / {costs} / {bonus}");
+            message += $"{name} / {costs} / {bonus}";
         }
 
         CPH.SendMessage(message);
@@ -1174,7 +1189,7 @@ public class CPHInline : CPHInlineBase
     {
         arenaOpen = false;
         CPH.DisableTimer("[DinoTame] Arena Entry Timer");
-        string message = string.Empty;
+        string message;
         int pot = CPH.GetGlobalVar<int>("DinoTame_ArenaPot", false);
         string json = CPH.GetGlobalVar<string>("DinoTame_Fighters", false);
         Dictionary<string, FighterEntry> fighters = JsonConvert.DeserializeObject<Dictionary<string, FighterEntry>>(json);
@@ -1281,11 +1296,11 @@ public class CPHInline : CPHInlineBase
     }
     public bool addFighter()
     {
-        string message = string.Empty;
         CPH.TryGetArg("userId", out string userId);
         CPH.TryGetArg("user", out string user);
         CPH.TryGetArg("fighterArenaEggPasteCost", out int eggPasteCost);
 
+        string message;
         if (!arenaOpen)
         {
             CPH.LogWarn("[DinoTame] Arena is not open. Cannot add fighter.");
@@ -1353,7 +1368,8 @@ public class CPHInline : CPHInlineBase
             CPH.TryGetArg("fighterArenaFirstEntryMessage", out message);
             message = ReplaceWithArgs(message, new Dictionary<string, object>
             {
-                { "user", user }
+                { "user", user },
+                { "dino", dino }
             });
         }
         else
@@ -1362,7 +1378,8 @@ public class CPHInline : CPHInlineBase
             CPH.TryGetArg("fighterArenaEntryMessage", out message);
             message = ReplaceWithArgs(message, new Dictionary<string, object>
             {
-                { "user", user }
+                { "user", user },
+                { "dino", dino }
             });
         }
         CPH.SendMessage(message);
