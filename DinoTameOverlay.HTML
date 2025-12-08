@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dino Arena Overlay</title>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
+	<style>
+		:root {
+			--anim-speed: 1;
+		}
+		body {
+			margin: 0;
+			width: 1920px;
+			height: 1080px;
+			background: transparent;
+			background : rgb(0, 0, 0);
+			/* background-image: url("C:\\Users\\rumsp\\Desktop\\Streamer.bot\\00\\Screenshots\\Live.png"); */
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			/* Damit es im OBS als Overlay nutzbar ist */
+			font-family: sans-serif;
+			/* color: #4dabf7; */
+			color: white;
+		}
+
+		.tame-dino {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 400px;
+			height: auto;
+			border: 2px solid #4dabf7;
+			border-radius: 10px;
+			padding: 15px;
+			background: rgba(33, 55, 63, 0.8);
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease;
+		}
+
+		.tame-dino.show {
+			animation: fadeInUp 2.4s ease forwards;
+			pointer-events: auto;
+		}
+
+		.tame-dino.hide {
+			animation: fadeOutDown 2.4s ease forwards;
+			pointer-events: none;
+		}
+
+		.tame-dino-content {
+			display: flex;
+			align-items: flex-start;
+			height: 100%;
+		}
+
+		.tame-dino-icon-border {
+			width: 128px;
+			height: 128px;
+			border: 1px solid #4dabf7;
+			border-radius: 10px;
+			background: rgba(33, 55, 63, 0.8);
+			margin-right: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.tame-dino-icon 
+		{
+			width: 98%;
+			height: 98%;
+			object-fit: contain;
+			filter: sepia(1) saturate(20) hue-rotate(317deg) brightness(0.66) invert(0.09) contrast(4);
+		}
+
+		.tame-dino-texts
+		{
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			padding-top: 0px;
+		}
+
+		.tame-dino-name
+		{
+			font-size: 1.3em;
+			font-weight: bold;
+			white-space: nowrap;
+			text-align: center;
+			margin: 2px 0;
+		}	
+		
+		.tame-dino-level,
+		.tame-dino-hp,
+		.tame-dino-dmg,
+		.tame-dino-torpor
+		{
+			font-size: 1.3em;
+			font-weight: bold;
+			white-space: nowrap;
+			text-align: center;
+			margin: 2px 0;
+		}
+
+		.tame-bar-container {
+			width: 100%;
+			height: 20px;
+			background: rgba(33, 55, 63, 0.8);
+			border: 1px solid #4dabf7;
+			border-radius: 4px;
+			position: relative;
+			overflow: hidden;
+		}
+		.tame-bar {
+			height: 100%;
+			width: 0%;
+			background-color: rgba(50, 205, 50, 0.8);
+			transition: width 0.3s ease;
+		}
+		.tame-bar-text {
+			color: white;
+			text-shadow: 1px 1px 3px black;
+			position: absolute;
+			bottom: 50%;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			font-weight: bold;
+			font-size: 1em;
+			pointer-events: none;
+		}
+		/* Arena-Join-Timer (ein Timer für die gesamte Arena, nicht pro Fighter) */
+		.arena-timer {
+			position: absolute;
+			top: 3px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 700px;
+			max-width: calc(100% - 40px);
+			height: 18px;
+			background: rgba(33,55,63,0.8);
+			border: 1px solid #4dabf7;
+			border-radius: 10px;
+			overflow: hidden;
+			display: none; /* wird beim Start sichtbar */
+			box-sizing: border-box;
+			padding: 2px;
+		}
+		.arena-timer.show { 
+			display: block;
+			animation: fadeInDown 0.7s ease forwards;
+		}
+		.arena-timer.hide { 
+			display: block; 
+			animation: fadeOutUp 0.4s ease forwards;
+		}
+		.arena-timer-bar {
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(90deg,#4dabf7,#6ee7ff);
+			transition: width 0.1s linear;
+		}
+		.arena-timer-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+			color: #fff;
+			font-weight: bold;
+			text-shadow: 1px 1px 3px black;
+			pointer-events: none;
+		}
+		.arena-list {
+			position: absolute;
+			top: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 0px));
+			grid-auto-rows: auto;
+			gap: 8px;
+			width: 1800px;
+			max-width: 100vw;
+			justify-content: center;
+			align-items: start;
+		}
+        .boss-list:not(:empty) + .arena-list {
+			top: 125px;
+        }        
+
+		.fighter-row {
+			border: 2px solid #4dabf7;
+			border-radius: 10px;
+			padding: 5px 5px;
+			padding-right: 10px;
+			background: rgba(33, 55, 63, 0.8);
+			transition: transform calc(0.5s / var(--anim-speed)) ease, box-shadow calc(0.5s / var(--anim-speed)) ease, border-color calc(0.5s / var(--anim-speed)) ease;
+		}
+
+		.fighter-inner {
+			display: flex;
+			align-items: center;
+		}
+
+		.fighter-dino-icon {
+			width: 50px;
+			/* oder größer je nach Geschmack */
+			height: 50px;
+			object-fit: contain;
+			margin-right: 4px;
+			filter: sepia(1) saturate(20) hue-rotate(317deg) brightness(0.66) invert(0.09) contrast(4);
+		}
+
+		.fighter-content {
+        	width: 100%;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.fighter-info {
+			display: flex;
+			justify-content: space-between;
+			gap: 6px;
+		}
+
+		.fighter-dino {
+			display: inline-block;
+			font-size: calc();
+			white-space: nowrap;
+			text-align: left;
+		}
+
+		.fighter-name {
+			display: inline-block;
+			font-size: 1em;
+			white-space: nowrap;
+			text-align: left;
+		}
+
+		.fighter-hp-bar-container {
+        	width: 100%;
+			position: relative;
+			background: rgb(192, 4, 4);
+			border: 1px solid #4dabf7;
+			border-radius: 4px;
+			height: 14px;
+			overflow: hidden;
+		}
+
+		.fighter-hp-bar {
+			background: rgb(8, 211, 8);
+			width: 100%;
+			height: 100%;
+			transition: width 0.3s ease;
+		}
+
+		.fighter-hp-text {
+			font-size: 0.8em;
+			color: rgb(255, 255, 255);
+			text-shadow: 1px 1px 3px black; /* leichter schwarzer Schatten für bessere Lesbarkeit */
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+		}
+
+		.fighter-damage-float-container {
+			position: absolute;
+			pointer-events: none;
+		}
+
+		.fighter-damage-float.crit {
+			position: relative;
+			font-size: 40px;
+			font-weight: bold;
+			color: #f55;
+			animation: floatCrit calc(1.0s / var(--anim-speed)) ease-out forwards;
+			text-shadow: 0 0 6px #000;
+		}
+
+		.fighter-damage-float {
+			position: relative;
+			font-size: 28px;
+			color: #ffcc00;
+			animation: floatUp calc(1.0s / var(--anim-speed)) ease-out forwards;
+			text-shadow: 0 0 6px #000;
+		}
+		
+		.fighter-row.attacker {
+			border: 3px solid gold;
+			box-shadow: 0 0 12px gold;
+			transform: scale(1.03);
+			/* animation: pulse 0.6s infinite alternate; */
+		}
+
+		.fighter-row.dead {
+			opacity: 0.5;
+			filter: grayscale(1);
+			pointer-events: none;
+			animation: deathFade 0.6s ease-out;
+		}
+
+		.boss-list {
+			position: absolute;
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%) scale(1.1);
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(350px, 0px));
+			grid-auto-rows: auto;
+			gap: 8px;
+			width: 1800px;
+			max-width: 100vw;
+			justify-content: center;
+			align-items: start;
+            
+		}
+
+		.boss-list .fighter-row {
+			border: 3px solid #ff3333;
+			box-shadow: 0px 0px 30px #ff3333;
+		}
+
+
+		@keyframes deathFade {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+			}
+			30% {
+				transform: scale(1.05) rotate(-2deg);
+			}
+			60% {
+				transform: scale(0.95) rotate(2deg);
+			}
+			100% {
+				opacity: 0.5;
+				transform: scale(1);
+			}
+		}
+
+		@keyframes pulse {
+			from {
+				transform: scale(1);
+			}
+			to {
+				transform: scale(1.03);
+			}
+		}
+
+		@keyframes floatUp {
+			0% {
+				transform: translateY(-20px);
+				opacity: 1;
+			}
+
+			50% {
+				transform: translateY(-60px);
+				opacity: 1;
+			}
+			
+			100% {
+				transform: translateY(-100px);
+				opacity: 0;
+			}
+		}
+
+		@keyframes floatCrit {
+			0% {
+				transform: translateY(-20px) scale(1) rotate(0deg);
+				opacity: 1;
+			}
+
+			50% {
+				transform: translateY(-60px) scale(1.2) rotate(12deg);
+				opacity: 1;
+			}
+
+			100% {
+				transform: translateY(-100px) scale(1.4) rotate(-12deg);
+				opacity: 0;
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translate(-50%, 150px);
+			}
+			to {
+				opacity: 1;
+				transform: translate(-50%, 0);
+			}
+		}
+		@keyframes fadeInDown {
+			from {
+				opacity: 0;
+				transform: translate(-50%, -20px);
+			}
+			to {
+				opacity: 1;
+				transform: translate(-50%, 0);
+			}
+		}		
+
+		@keyframes fadeOutDown {
+			from {
+				opacity: 1;
+				transform: translate(-50%, 0);
+			}
+			to {
+				opacity: 0;
+				transform: translate(-50%, 150px);
+			}
+		}
+		@keyframes fadeOutUp {
+			from {
+				opacity: 1;
+				transform: translate(-50%, 0);
+			}
+			to {
+				opacity: 0;
+				transform: translate(-50%, -20px);
+			}		
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Arena Join Timer -->
+	<div id="arena-timer" class="arena-timer" aria-hidden="true">
+		<div id="arena-timer-bar" class="arena-timer-bar"></div>
+		<div id="arena-timer-text" class="arena-timer-text">0s</div>
+	</div>
+
+	<div class="boss-list" id="boss-list"></div>
+	<div class="arena-list" id="arena-list"></div>
+	
+	<div class="tame-dino">
+		<div class="tame-dino-content">
+			<div class="tame-dino-icon-border">
+				<img src="" class="tame-dino-icon" alt="Icon" />
+			</div>
+			<div class="tame-dino-texts">
+				<div class="tame-dino-name">Achatina</div>
+				<div class="tame-dino-level">Level: 5</div>
+				<div class="tame-dino-hp">HP: 2</div>
+				<div class="tame-dino-dmg">DMG: 100</div>
+				<div class="tame-dino-torpor">Torpor: 10</div>
+			</div>
+		</div>
+		<div class="tame-bar-container">
+			<div class="tame-bar" id="tame-bar"></div>
+			<div class="tame-bar-text" id="tame-bar-text">0%</div>
+		</div>
+	</div>
+	<script>
+		let animationSpeed = 1.0; // Standardgeschwindigkeit
+		function setAnimationSpeed(mp) {
+			animationSpeed = Math.max(0.1, Number(mp) || 1.0);
+
+			// CSS-Variablen aktualisieren
+			document.documentElement.style.setProperty("--anim-speed", animationSpeed);
+		}		
+
+		function scaleTextToFit(el, maxWidth, maxFontSize = 18, minFontSize = 8) {
+			if (!el) return;
+			const container = el.parentElement;
+			let fontSize = maxFontSize;
+			el.style.fontSize = fontSize + "px";
+
+			// Falls vorher zu groß skaliert wurde, zurücksetzen
+			while (el.scrollWidth <= maxWidth && fontSize < maxFontSize) {
+				fontSize += 0.1;
+				el.style.fontSize = fontSize + "px";
+			}
+
+			while (el.scrollWidth > maxWidth && fontSize > minFontSize) {
+				fontSize -= 0.1;
+				el.style.fontSize = fontSize + "px";
+			}
+		}
+		function addFighter(id, playerName, dinoName, iconUrl, currentHP, maxHP, joinDurationSeconds) {
+			addToList("arena-list", id, playerName, dinoName, iconUrl, currentHP, maxHP, joinDurationSeconds);
+		}
+		function addBoss(id, playerName, dinoName, iconUrl, currentHP, maxHP, joinDurationSeconds) {
+			addToList("boss-list", id, playerName, dinoName, iconUrl, currentHP, maxHP, joinDurationSeconds);
+		}
+
+		function addToList(target, id, playerName, dinoName, iconUrl, currentHP, maxHP, joinDurationSeconds) {
+			const arenaList = document.getElementById(target);
+
+			const fighter = document.createElement('div');
+			fighter.className = 'fighter-row';
+			fighter.id = 'fighter-' + id;
+
+			fighter.innerHTML = `
+				<div class="fighter-inner">
+					<img src="${iconUrl}" class="fighter-dino-icon" alt="${dinoName}" />
+					<div class="fighter-content">
+						<div class="fighter-dino">${dinoName}</div>
+						<div class="fighter-name">${playerName}</div>
+                    </div>
+                    </div>
+					<div class="fighter-hp-bar-container">
+						<div class="fighter-hp-bar" id="fighter-hp-bar-${id}" style="width: ${(currentHP / maxHP) * 100}%"></div>
+						<div class="fighter-hp-text" id="fighter-hp-text-${id}">${currentHP} / ${maxHP}</div>
+					</div>
+					
+				
+				<div class="fighter-damage-float-container" id="fighter-damage-${id}"></div>
+			`;
+
+			arenaList.appendChild(fighter);
+			if (target == "arena-list") {
+              scaleTextToFit(fighter.querySelector(".fighter-dino"), 180);
+              scaleTextToFit(fighter.querySelector(".fighter-name"), 180);
+              }
+
+			// Nur im FFA Modus Timer starten
+			if (!window.arenaTimerRunning) {
+				startArenaJoinTimer(Number(joinDurationSeconds) || 1);
+			}
+		}
+
+		// Start/Stop-Funktionen für den Arena-Join-Timer
+		let arenaTimerRaf = null;
+		let arenaTimerStart = 0;
+		let arenaTimerDuration = 0;
+		window.arenaTimerRunning = false;
+		function startArenaJoinTimer(durationSeconds) {
+			const container = document.getElementById('arena-timer');
+			const bar = document.getElementById('arena-timer-bar');
+			const text = document.getElementById('arena-timer-text');
+			if (!container || !bar || !text) return;
+			arenaTimerDuration = Math.max(1, Number(durationSeconds) || 10) * 1000;
+			arenaTimerStart = performance.now();
+			container.classList.remove('hide')
+			container.classList.add('show');
+			container.setAttribute('aria-hidden','false');
+			window.arenaTimerRunning = true;
+
+			function tick(now) {
+				const elapsed = now - arenaTimerStart;
+				const remaining = Math.max(0, arenaTimerDuration - elapsed);
+				const pct = (remaining / arenaTimerDuration) * 100;
+				bar.style.width = pct + '%';
+				text.textContent = Math.ceil(remaining / 1000) + ' Sekunden';
+
+				if (remaining > 0) {
+					arenaTimerRaf = requestAnimationFrame(tick);
+				} else {
+					// Timer abgelaufen
+					stopArenaJoinTimer();
+				}
+			}
+			arenaTimerRaf = requestAnimationFrame(tick);
+		}
+		function stopArenaJoinTimer() {
+			if (arenaTimerRaf) {
+				cancelAnimationFrame(arenaTimerRaf);
+				arenaTimerRaf = null;
+			}
+			const container = document.getElementById('arena-timer');
+			const bar = document.getElementById('arena-timer-bar');
+			const text = document.getElementById('arena-timer-text');
+			if (container) container.classList.remove('show'); container.classList.add('hide');
+			if (bar) bar.style.width = '0%';
+			if (text) text.textContent = '0 Sekunden';
+			window.arenaTimerRunning = false;
+		}		
+		function attackFighter(attackerId, id, currentHP, maxHP, damage, critDmg) {
+			const bar = document.getElementById(`fighter-hp-bar-${id}`);
+			const text = document.getElementById(`fighter-hp-text-${id}`);
+    
+			if (bar && text) {
+				bar.style.width = `${(currentHP / maxHP) * 100}%`;
+				text.textContent = `${currentHP} / ${maxHP}`;
+			}
+
+			if (damage > 0) {
+				showDamage(id, damage, critDmg === true);
+			}
+		}
+		function showDamage(id, amount, isCrit) {
+			const container = document.getElementById(`fighter-damage-${id}`);
+			if (!container) return;
+
+			const dmgElement = document.createElement('div');
+			dmgElement.className = 'fighter-damage-float' + (isCrit ? ' crit' : '');
+			dmgElement.textContent = `-${amount}`;
+
+			container.appendChild(dmgElement);
+
+			// Entfernen nach Animation
+			setTimeout(() => {
+				container.removeChild(dmgElement);
+			}, 1000 / animationSpeed);
+		}
+		function setAttacker(id) {
+			// Entferne aktuelle Markierung
+			document.querySelectorAll('.fighter-row.attacker').forEach(el => el.classList.remove('attacker'));
+
+			// Setze neue Markierung
+			const fighter = document.getElementById('fighter-' + id);
+			if (fighter) {
+				fighter.classList.add('attacker');
+			}
+		}
+		function markAsDead(id) {
+			const fighter = document.getElementById('fighter-' + id);
+			if (!fighter) return;
+
+			// Markiere als tot
+			fighter.classList.add('dead');
+
+			// Optional: HP-Leiste entfernen oder einfrieren
+			const hpBar = fighter.querySelector('.fighter-hp-bar');
+			const hpText = fighter.querySelector('.fighter-hp-text');
+			if (hpBar) hpBar.style.display = 'none';
+			if (hpText) hpText.style.opacity = '0.5';
+		}
+
+		const tameBar = document.getElementById('tame-bar');
+		const tameBarText = document.getElementById('tame-bar-text');
+		let startTime = null;
+		let duration = 10;
+		function spawnDino(dinoName, iconUrl, level, hp, dmg, torpor, duration2) {
+			const tameDino = document.querySelector('.tame-dino');
+			const icon = tameDino.querySelector('.tame-dino-icon');
+			const name = tameDino.querySelector('.tame-dino-name');
+			const levelText = tameDino.querySelector('.tame-dino-level');
+			const hpText = tameDino.querySelector('.tame-dino-hp');
+			const dmgText = tameDino.querySelector('.tame-dino-dmg');
+			const torporText = tameDino.querySelector('.tame-dino-torpor');
+			const tameBar = document.getElementById('tame-bar');
+			const tameBarText = document.getElementById('tame-bar-text');
+			startTime = null;
+			duration = duration2;
+
+			icon.src = iconUrl;
+			name.textContent = dinoName;
+			levelText.textContent = `Level: ${level}`;
+			hpText.textContent = `HP: ${hp}`;
+			dmgText.textContent = `DMG: ${dmg}`;
+			torporText.textContent = `Torpor: ${torpor}`;
+
+			// Dynamisch skalieren
+			scaleTextToFit(name, 180);
+
+			// Animation starten
+			tameDino.classList.remove('hide');
+			tameDino.classList.add('show');
+
+			requestAnimationFrame(animate);
+
+			// Nach Ablauf der Zeit automatisch ausblenden
+			setTimeout(() => {
+				tameDino.classList.remove('show');
+				tameDino.classList.add('hide');
+			}, duration2 * 1000);
+		}
+		function animate(timestamp) {
+			if (!startTime) startTime = timestamp;
+			const elapsed = Math.min((timestamp - startTime) / 1000, duration); // Sekunden, begrenzt auf duration
+
+			const progress = (elapsed / duration) * 100;
+			tameBar.style.width = progress + '%';
+
+			// Text aktualisieren: z.B. "18 / 60 Sekunden"
+			tameBarText.textContent = Math.floor(elapsed) + " / " + duration + " Sekunden";
+
+			if (elapsed < duration) {
+				requestAnimationFrame(animate);
+			}
+		}
+
+			// Beispielaufruf
+			//spawnDino("Carcharodontosaurus", "", 150, 100, 10, 1000, 60);
+            //addFighter(0, "Darth_Baobab", "Broodmother Lysrix", "", 900, 900, 12)
+			//addBoss(1, "", "Megalania", "", 5000, 5000, 12)
+            //addFighter(0, "Darth_Baobab", "Carcharodontosaurus (Lvl 150)", "", 900, 900, 12)      
+      		//addBoss(1, "", "Megalania", "", 5000, 5000, 12)
+
+	</script>
+
+	<script type="text/javascript">
+		const client = new StreamerbotClient({host: '192.168.178.30'});
+		// Subscribe to all custom events from the connected Streamer.bot instance
+		client.on('General.Custom', (event) => {
+			console.log('Custom Event:', event);
+			//const data2 = JSON.parse(data);
+			//console.log("Nachricht vom Streamer.bot:", data2);
+			console.log(event.data);
+			if (event.data.type === "addFighter") {
+				addFighter(event.data.id, event.data.playerName, event.data.dinoName, event.data.iconUrl, event.data.currentHP, event.data.maxHP, event.data.joinDurationSeconds);
+			}
+			if (event.data.type === "addBoss") {
+				addBoss(event.data.id, event.data.playerName, event.data.dinoName, event.data.iconUrl, event.data.currentHP, event.data.maxHP, event.data.joinDurationSeconds);
+			}			
+			if (event.data.type === "attackFighter") {
+				setAnimationSpeed(event.data.animationSpeed);
+				setAttacker(event.data.attackerId);
+				setTimeout(() => {
+					attackFighter(event.data.attackerId, event.data.id, event.data.currentHP, event.data.maxHP, event.data.damage, event.data.critDmg);
+					setTimeout(() => {
+						if (event.data.currentHP <= 0) {
+							markAsDead(event.data.id);
+						}
+					}, 200);
+				}, 300);
+			}
+			if (event.data.type === "clearFighters") {
+				stopArenaJoinTimer();
+				document.getElementById('arena-list').innerHTML = ''; // Alle Kämpfer entfernen
+				document.getElementById('boss-list').innerHTML = '';
+			}
+			if (event.data.type === "spawnDino")
+			{
+				spawnDino(event.data.dinoName, event.data.iconUrl, event.data.level, event.data.hp, event.data.dmg, event.data.torpor, event.data.duration);
+			}
+
+		});
+
+	</script>
+
+</body>
+</html>

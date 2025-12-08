@@ -1,0 +1,152 @@
+Aberrant Anglerfish
+Aberrant Arthropluera
+Aberrant Baryonyx
+Aberrant Beelzebufo
+Aberrant Carnotaurus
+Aberrant Cnidaria
+Aberrant Coelacanth
+Aberrant Dimetrodon
+Aberrant Diplocaulus
+Aberrant Dung Beetle
+Aberrant Electrophorus
+Aberrant Manta
+Aberrant Megalosaurus
+Aberrant Otter
+Aberrant Piranha
+Aberrant Pulmonoscorpius
+Aberrant Purlovia
+Aberrant Salmon
+Aberrant Sarco
+Aberrant Spino
+Aberrant Trilobite
+Achatina
+Allosaurus
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Argentavis
+Arthropluera
+Baryonyx
+Basilisk
+Basilosaurus
+Beelzebufo
+Blood Crystal Wyvern
+Brontosaurus
+Carbonemys
+Carnotaurus
+Castoroides
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Daeodon
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Dinopithecus
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Diseased Leech
+Dodo
+Doedicurus
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Ember Crystal Wyvern
+Equus
+Eurypterid
+Featherlight
+Fire Wyvern
+Gallimimus
+Giant Queen Bee
+Giant Worker Bee
+Giganotosaurus
+Gigantopithecus
+Glowbug
+Glowtail
+Griffin
+Hesperornis
+Hyaenodon 
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Jerboa
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Lamprey
+Leech
+Leedsichthys
+Liopleurodon
+Lymantria
+Lystrosaurus
+Mammoth
+Manta
+Mantis
+Megalania
+Megaloceros
+Megalodon
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Morellatops
+Mosasaurus
+Moschops
+Oil Jug Bug
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Plesiosaur
+Polar Bear
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Quetzal
+Raptor
+Ravager
+Rex
+Rock Elemental
+Sabertooth
+Sabertooth Salmon
+Sarco
+Seeker
+Spino
+Stegosaurus
+Tapejara
+Terror Bird
+Therizinosaur
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanomyrma Soldier
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tropeognathus
+Tropical Crystal Wyvern
+Tusoteuthis
+Unicorn
+Vulture
+Water Jug Bug
+Woolly Rhino
+Yeti
+Yutyrannus

@@ -1,0 +1,193 @@
+Aberrant Achatina
+Aberrant Ankylosaurus
+Aberrant Arthropluera
+Aberrant Carbonemys
+Aberrant Carnotaurus
+Aberrant Coelacanth
+Aberrant Diplodocus
+Aberrant Dire Bear
+Aberrant Dodo
+Aberrant Doedicurus
+Aberrant Dung Beetle
+Aberrant Equus
+Aberrant Gigantopithecus
+Aberrant Gigantoraptor
+Aberrant Iguanodon
+Aberrant Lystrosaurus
+Aberrant Manta
+Aberrant Megalosaurus
+Aberrant Meganeura
+Aberrant Moschops
+Aberrant Otter
+Aberrant Oviraptor
+Aberrant Ovis
+Aberrant Paraceratherium
+Aberrant Parasaur
+Aberrant Piranha
+Aberrant Pulmonoscorpius
+Aberrant Raptor
+Aberrant Sarco
+Aberrant Spino
+Aberrant Stegosaurus
+Aberrant Titanoboa
+Aberrant Triceratops
+Achatina
+Allosaurus
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Archelon
+Argentavis
+Armadoggo
+Arthropluera
+Baryonyx
+Basilosaurus
+Beelzebufo
+Brontosaurus
+Bulbdog
+Carbonemys
+Carnotaurus
+Castoroides
+Cat
+Ceratosaurus
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Corrupted Arthropluera
+Corrupted Carnotaurus
+Corrupted Chalicotherium
+Corrupted Dilophosaur
+Corrupted Paraceratherium
+Corrupted Pteranodon
+Corrupted Raptor
+Corrupted Reaper King
+Corrupted Rex
+Corrupted Rock Drake
+Corrupted Spino
+Corrupted Stegosaurus
+Corrupted Triceratops
+Cosmo
+Daeodon
+Deathworm
+Defense Unit
+Deinosuchus
+Deinotherium
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Dodo
+Doedicurus
+Dreadmare
+Dreadnoughtus
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Enforcer
+Equus
+Eurypterid
+Fasolasuchus
+Fire Wyvern
+Gacha
+Gallimimus
+Gasbags
+Giant Queen Bee
+Gigantopithecus
+Gigantoraptor
+Hesperornis
+Hyaenodon
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Jerboa
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Leech
+Leedsichthys
+Light Bug
+Lightning Wyvern
+Liopleurodon
+Lystrosaurus
+Mammoth
+Managarmr
+Manta
+Mantis
+Megalania
+Megaloceros
+Megalodon
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Morellatops
+Mosasaurus
+Moschops
+Nameless
+Oasisaur
+Oil Jug Bug
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Poison Wyvern
+Polar Bear
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Quetzal
+Raptor
+Ravager
+Reaper Queen
+Rex
+Rhyniognatha
+Rock Drake
+Rock Elemental
+Roll Rat
+Sabertooth
+Sabertooth Salmon
+Sarco
+Scout
+Shinehorn
+Snow Owl
+Spino
+Stegosaurus
+Surface Reaper King
+Tapejara
+Terror Bird
+Therizinosaur
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tusoteuthis
+Unicorn
+Velonasaur
+Vulture
+Water Jug Bug
+Woolly Rhino
+Xiphactinus
+Yeti
+Yi Ling
+Yutyrannus

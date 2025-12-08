@@ -1,0 +1,204 @@
+Aberrant Achatina
+Aberrant Arthropluera
+Aberrant Carbonemys
+Aberrant Carnotaurus
+Aberrant Coelacanth
+Aberrant Diplodocus
+Aberrant Dire Bear
+Aberrant Dodo
+Aberrant Doedicurus
+Aberrant Dung Beetle
+Aberrant Equus
+Aberrant Iguanodon
+Aberrant Lystrosaurus
+Aberrant Megalania
+Aberrant Megalosaurus
+Aberrant Meganeura
+Aberrant Moschops
+Aberrant Otter
+Aberrant Ovis
+Aberrant Paraceratherium
+Aberrant Parasaur
+Aberrant Piranha
+Aberrant Pulmonoscorpius
+Aberrant Purlovia
+Aberrant Raptor
+Aberrant Salmon
+Aberrant Sarco
+Aberrant Spino
+Aberrant Stegosaurus
+Aberrant Titanoboa
+Aberrant Triceratops
+Achatina
+Allosaurus
+Ammonite
+Andrewsarchus
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Argentavis
+Arthropluera
+Baryonyx
+Basilisk
+Basilosaurus
+Beelzebufo
+Brontosaurus
+Bulbdog
+Carbonemys
+Carnotaurus
+Castoroides
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Daeodon
+Deinonychus
+Desmodus
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Diseased Leech
+Dodo
+Doedicurus
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Equus
+Eurypterid
+Featherlight
+Ferox
+Fire Wyvern
+Fjordhawk
+Gacha
+Gallimimus
+Gasbags
+Giant Queen Bee
+Giganotosaurus
+Gigantopithecus
+Glowbug
+Glowtail
+Griffin
+Hesperornis
+Hyaenodon 
+Ice Wyvern
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Lamprey
+Leech
+Leedsichthys
+Lightning Wyvern
+Liopleurodon
+Lystrosaurus
+Maewing
+Magmasaur
+Mammoth
+Manta
+Mantis
+Megachelon
+Megalania
+Megaloceros
+Megalodon
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Mosasaurus
+Moschops
+Oil Jug Bug
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parakeet Fish School
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Plesiosaur
+Poison Wyvern
+Polar Bear
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Quetzal
+R-Allosaurus 
+R-Brontosaurus
+R-Carbonemys
+R-Carnotaurus
+R-Daeodon
+R-Dilophosaur
+R-Direwolf
+R-Equus
+R-Gasbags
+R-Giganotosaurus
+R-Parasaur
+R-Procoptodon
+R-Snow Owl
+R-Thylacoleo
+Raptor
+Ravager
+Rex
+Rock Drake
+Roll Rat
+Sabertooth
+Sabertooth Salmon
+Sarco
+Seeker
+Shadowmane
+Shinehorn
+Snow Owl
+Spino
+Stegosaurus
+Tapejara
+Terror Bird
+Therizinosaur
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanomyrma Soldier
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tropeognathus
+Tusoteuthis
+Unicorn
+Velonasaur
+Vulture
+Water Jug Bug
+Woolly Rhino
+X-Allosaurus
+X-Ankylosaurus
+X-Argentavis
+X-Dunkleosteus
+X-Megalodon
+X-Mosasaurus
+X-Parasaur
+X-Raptor
+X-Rex
+X-Rock Elemental
+X-Sabertooth
+X-Sabertooth Salmon
+X-Tapejara
+X-Triceratops
+X-Woolly Rhino
+X-Yutyrannus
+Yeti
+Yutyrannus

@@ -1,0 +1,122 @@
+Achatina
+Allosaurus
+Ankylosaurus
+Araneo
+Archaeopteryx
+Argentavis
+Armadoggo
+Arthropluera
+Baryonyx
+Beelzebufo
+Brontosaurus
+Carbonemys
+Carcharodontosaurus
+Carnotaurus
+Castoroides
+Ceratosaurus
+Chalicotherium
+Coelacanth
+Compy
+Corrupted Arthropluera
+Corrupted Carnotaurus
+Corrupted Chalicotherium
+Corrupted Dilophosaur
+Corrupted Giganotosaurus
+Corrupted Paraceratherium
+Corrupted Pteranodon
+Corrupted Raptor
+Corrupted Reaper King
+Corrupted Rex
+Corrupted Rock Drake
+Corrupted Spino
+Corrupted Stegosaurus
+Corrupted Triceratops
+Corrupted Wyvern
+Daeodon
+Defense Unit
+Deinosuchus
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Dodo
+Doedicurus
+Dreadmare
+Dreadnoughtus
+Dung Beetle
+Enforcer
+Equus
+Gacha
+Gallimimus
+Gasbags
+Giant Queen Bee
+Giganotosaurus
+Gigantoraptor
+Hesperornis
+Hyaenodon
+Ichthyornis
+Iguanodon
+Kairuku
+Kaprosuchus
+Kentrosaurus
+King Titan
+Lymantria
+Lystrosaurus
+Mammoth
+Mantis
+Megalania
+Megaloceros
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Morellatops
+Moschops
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Phiomia
+Piranha
+Polar Bear
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Quetzal
+Raptor
+Rex
+Rock Elemental
+Rubble Golem
+Sabertooth
+Sabertooth Salmon
+Sarco
+Scout
+Snow Owl
+Spino
+Stegosaurus
+Tapejara
+Terror Bird
+Therizinosaur
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanomyrma Soldier
+Triceratops
+Trilobite
+Troodon
+Velonasaur
+Water Jug Bug
+Woolly Rhino
+Yeti
+Yutyrannus

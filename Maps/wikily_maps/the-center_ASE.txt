@@ -1,0 +1,108 @@
+Achatina
+Allosaurus 
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Argentavis
+Arthropluera
+Baryonyx
+Basilosaurus
+Beelzebufo
+Bronto
+Bunny Oviraptor
+Carbonemys
+Carcharodontosaurus
+Carnotaurus
+Castoroides
+Ceratosaurus
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Daeodon
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Diseased Leech
+Dodo
+Doedicurus
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Equus
+Eurypterid
+Gallimimus
+Giant Queen Bee
+Giganotosaurus
+Gigantopithecus
+Gigantoraptor
+Hesperornis
+Hyaenodon 
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Kairuku
+Kaprosuchus
+Kentrosaurus
+Leedsichthys
+Liopleurodon
+Lystrosaurus
+Mammoth
+Manta
+Megalania
+Megaloceros
+Megalodon
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Mosasaur
+Moschops
+Onyc
+Otter
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Plesiosaur
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Pyromane
+Quetzal
+Raptor
+Rex
+Sabertooth
+Sabertooth Salmon
+Sarco
+Shastasaurus
+Spino
+Stegosaurus
+Terror Bird
+Therizinosaur
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanomyrma Soldier
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tusoteuthis
+Woolly Rhino
+Xiphactinus
+Yeti
+Yutyrannus

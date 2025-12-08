@@ -4,109 +4,145 @@ Ammonite
 Anglerfish
 Ankylosaurus
 Araneo
-Archaeopteryx
-Archelon
 Argentavis
 Arthropluera
+Astrocetus
+Astrodelphis
 Baryonyx
+Basilisk
 Basilosaurus
 Beelzebufo
+Bloodstalker
 Brontosaurus
+Bulbdog
 Carbonemys
 Carnotaurus
 Castoroides
-Ceratosaurus
 Chalicotherium
 Cnidaria
 Coelacanth
 Compy
 Daeodon
-Deinosuchus
+Defense Unit
 Dilophosaur
 Dimetrodon
 Dimorphodon
 Diplocaulus
 Diplodocus
 Dire Bear
-Direwolf
 Diseased Leech
 Dodo
 Doedicurus
 Dung Beetle
 Dunkleosteus
 Electrophorus
-Equus
+Enforcer
 Eurypterid
+Featherlight
+Ferox
+Gacha
 Gallimimus
 Giant Queen Bee
 Giganotosaurus
-Gigantopithecus
-Gigantoraptor
+Glowbug
+Glowtail
 Hesperornis
-Hyaenodon
+Hyaenodon 
 Ichthyornis
 Ichthyosaurus
 Iguanodon
-Kairuku
+Insect Swarm
+Jerboa
 Kaprosuchus
+Karkinos
 Kentrosaurus
+Lamprey
 Leech
 Leedsichthys
 Liopleurodon
+Lymantria
 Lystrosaurus
+Macrophage
+Maewing
 Mammoth
+Managarmr
 Manta
-Megalania
+Mantis
 Megaloceros
 Megalodon
-Megalosaurus
 Meganeura
 Megatherium
 Mesopithecus
 Microraptor
 Mosasaurus
 Moschops
-Onyc
+Noglin
+Oil Jug Bug
 Otter
 Oviraptor
 Ovis
 Pachy
 Pachyrhinosaurus
 Paraceratherium
+Parakeet Fish School
 Parasaur
 Pegomastax
-Pelagornis
 Phiomia
 Piranha
 Plesiosaur
-Polar Bear
 Procoptodon
 Pteranodon
 Pulmonoscorpius
 Purlovia
 Quetzal
+R-Allosaurus 
+R-Brontosaurus
+R-Carbonemys
+R-Carnotaurus
+R-Daeodon
+R-Dilophosaur
+R-Direwolf
+R-Equus
+R-Gasbags
+R-Giganotosaurus
+R-Megatherium
+R-Parasaur
+R-Procoptodon
+R-Quetzal
+R-Reaper King
+R-Reaper Queen
+R-Snow Owl
+R-Thylacoleo
+R-Velonasaur
 Raptor
+Ravager
 Rex
-Rhyniognatha
+Rock Elemental
+Roll Rat
 Sabertooth
 Sabertooth Salmon
 Sarco
+Scout
+Seeker
+Shadowmane
+Shinehorn
 Spino
 Stegosaurus
+Summoner
 Tapejara
+Tek Stryder
 Terror Bird
 Therizinosaur
-Thylacoleo
+Thorny Dragon
 Titanoboa
 Titanomyrma Drone
 Titanomyrma Soldier
-Titanosaur
 Triceratops
 Trilobite
 Troodon
 Tusoteuthis
-Unicorn
+Voidwyrm
+Vulture
+Water Jug Bug
 Woolly Rhino
-Xiphactinus
-Yeti
 Yutyrannus

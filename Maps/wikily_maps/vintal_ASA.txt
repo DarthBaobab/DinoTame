@@ -1,0 +1,177 @@
+Aberrant Achatina
+Aberrant Anglerfish
+Aberrant Ankylosaurus
+Aberrant Arthropluera
+Aberrant Baryonyx
+Aberrant Beelzebufo
+Aberrant Carbonemys
+Aberrant Carnotaurus
+Aberrant Cnidaria
+Aberrant Coelacanth
+Aberrant Dimetrodon
+Aberrant Diplocaulus
+Aberrant Diplodocus
+Aberrant Dodo
+Aberrant Doedicurus
+Aberrant Dung Beetle
+Aberrant Electrophorus
+Aberrant Equus
+Aberrant Gigantopithecus
+Aberrant Iguanodon
+Aberrant Lystrosaurus
+Aberrant Megalania
+Aberrant Megalosaurus
+Aberrant Moschops
+Aberrant Otter
+Aberrant Oviraptor
+Aberrant Ovis
+Aberrant Paraceratherium
+Aberrant Parasaur
+Aberrant Pulmonoscorpius
+Aberrant Purlovia
+Aberrant Raptor
+Aberrant Salmon
+Aberrant Sarco
+Aberrant Spino
+Aberrant Stegosaurus
+Aberrant Titanoboa
+Aberrant Triceratops
+Aberrant Trilobite
+Achatina
+Allosaurus
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Archelon
+Argentavis
+Arthropluera
+Baryonyx
+Basilisk
+Beelzebufo
+Brontosaurus
+Bulbdog
+Carbonemys
+Carcharodontosaurus
+Carnotaurus
+Castoroides
+Cat
+Ceratosaurus
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Cosmo
+Daeodon
+Deathworm
+Deinosuchus
+Deinotherium
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Direwolf
+Dodo
+Doedicurus
+Dreadmare
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Equus
+Eurypterid
+Fasolasuchus
+Featherlight
+Fire Wyvern
+Gallimimus
+Giant Queen Bee
+Giganotosaurus
+Gigantopithecus
+Gigantoraptor
+Hesperornis
+Hyaenodon
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Jerboa
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Lamprey
+Leech
+Light Bug
+Lightning Wyvern
+Liopleurodon
+Lystrosaurus
+Mammoth
+Manta
+Mantis
+Megalania
+Megaloceros
+Megalodon
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Morellatops
+Mosasaurus
+Moschops
+Oasisaur
+Oil Jug Bug
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Plesiosaur
+Poison Wyvern
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Pyromane
+Quetzal
+Raptor
+Ravager
+Reaper Queen
+Rex
+Rhyniognatha
+Rock Drake
+Rock Elemental
+Roll Rat
+Sabertooth
+Sabertooth Salmon
+Sarco
+Seeker
+Shastasaurus
+Shinehorn
+Spino
+Stegosaurus
+Tapejara
+Terror Bird
+Therizinosaur
+Thorny Dragon
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tusoteuthis
+Unicorn
+Vulture
+Water Jug Bug
+Woolly Rhino
+Xiphactinus
+Yi Ling
+Yutyrannus

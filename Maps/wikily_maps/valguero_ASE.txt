@@ -1,0 +1,177 @@
+Aberrant Anglerfish
+Aberrant Araneo
+Aberrant Baryonyx
+Aberrant Beelzebufo
+Aberrant Carbonemys
+Aberrant Carnotaurus
+Aberrant Dimetrodon
+Aberrant Dimorphodon
+Aberrant Diplocaulus
+Aberrant Diplodocus
+Aberrant Dire Bear
+Aberrant Dodo
+Aberrant Doedicurus
+Aberrant Electrophorus
+Aberrant Equus
+Aberrant Iguanodon
+Aberrant Lystrosaurus
+Aberrant Meganeura
+Aberrant Moschops
+Aberrant Otter
+Aberrant Ovis
+Aberrant Paraceratherium
+Aberrant Parasaur
+Aberrant Pulmonoscorpius
+Aberrant Raptor
+Aberrant Salmon
+Aberrant Sarco
+Aberrant Spino
+Aberrant Stegosaurus
+Aberrant Titanoboa
+Aberrant Triceratops
+Aberrant Trilobite
+Achatina
+Allosaurus
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Archelon
+Argentavis
+Arthropluera
+Autumn Drakeling
+Baryonyx
+Basilisk
+Basilosaurus
+Beelzebufo
+Bison
+Brontosaurus
+Broodmother Lysrix
+Bulbdog
+Carbonemys
+Carcharodontosaurus
+Carnotaurus
+Castoroides
+Cat
+Ceratosaurus
+Chalicotherium
+Chalk Elemental
+Cnidaria
+Coelacanth
+Compy
+Cosmo
+Daeodon
+Deinonychus
+Deinosuchus
+Deinotherium
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Dire Polar Bear
+Direwolf
+Dodo
+Doedicurus
+Dreadmare
+Dung Beetle
+Dunkleosteus
+Elderclaw
+Electrophorus
+Equus
+Eurypterid
+Featherlight
+Fire Wyvern
+Gallimimus
+Giant Queen Bee
+Giganotosaurus
+Gigantopithecus
+Gigantoraptor
+Glowtail
+Helicoprion
+Hesperornis
+Hyaenodon
+Ice Elemental
+Ice Wyvern
+Iceworm Male
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Jerboa
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Lamprey
+Leech
+Leedsichthys
+Light Bug
+Liopleurodon
+Lystrosaurus
+Mammoth
+Manta
+Mantis
+Megalania
+Megaloceros
+Megalodon
+Meganeura
+Megaraptor
+Megatherium
+Mesopithecus
+Microraptor
+Mosasaurus
+Moschops
+Nameless
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Polar Bear
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Pyromane
+Quetzal
+Raptor
+Ravager
+Reaper Queen
+Rex
+Rhyniognatha
+Rock Drake
+Roll Rat
+Sabertooth
+Sabertooth Salmon
+Sarco
+Seeker
+Shinehorn
+Spino
+Spring Drakeling
+Stegosaurus
+Summer Drakeling
+Tapejara
+Terror Bird
+Therizinosaur
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Triceratops
+Trilobite
+Troodon
+Tusoteuthis
+Unicorn
+Winter Drakeling
+Woolly Rhino
+Xiphactinus
+Yeti
+Yutyrannus

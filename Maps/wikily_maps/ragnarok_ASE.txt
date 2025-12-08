@@ -1,0 +1,130 @@
+Aberrant Dodo
+Aberrant Megalania
+Achatina
+Allosaurus
+Ammonite
+Anglerfish
+Ankylosaurus
+Araneo
+Archaeopteryx
+Archelon
+Argentavis
+Arthropluera
+Autumn Drakeling
+Baryonyx
+Basilosaurus
+Beelzebufo
+Bison
+Brontosaurus
+Carbonemys
+Carcharodontosaurus
+Carnotaurus
+Castoroides
+Cat
+Ceratosaurus
+Chalicotherium
+Cnidaria
+Coelacanth
+Compy
+Daeodon
+Deinosuchus
+Deinotherium
+Dilophosaur
+Dimetrodon
+Dimorphodon
+Diplocaulus
+Diplodocus
+Dire Bear
+Dire Polar Bear
+Direwolf
+Dodo
+Doedicurus
+Dreadmare
+Dung Beetle
+Dunkleosteus
+Electrophorus
+Equus
+Eurypterid
+Featherlight
+Gallimimus
+Giant Queen Bee
+Giganotosaurus
+Gigantopithecus
+Griffin
+Hesperornis
+Hyaenodon
+Ice Wyvern
+Iceworm Male
+Ichthyornis
+Ichthyosaurus
+Iguanodon
+Jerboa
+Kairuku
+Kaprosuchus
+Karkinos
+Kentrosaurus
+Leech
+Light Bug
+Liopleurodon
+Lystrosaurus
+Mammoth
+Manta
+Megalania
+Megaloceros
+Megalodon
+Megalosaurus
+Meganeura
+Megatherium
+Mesopithecus
+Microraptor
+Morellatops
+Mosasaurus
+Moschops
+Onyc
+Otter
+Oviraptor
+Ovis
+Pachy
+Pachyrhinosaurus
+Paraceratherium
+Parasaur
+Pegomastax
+Pelagornis
+Phiomia
+Piranha
+Plesiosaur
+Poison Wyvern
+Procoptodon
+Pteranodon
+Pulmonoscorpius
+Purlovia
+Quetzal
+Raptor
+Rex
+Rock Elemental
+Sabertooth
+Sabertooth Salmon
+Sarco
+Shinehorn
+Spino
+Spring Drakeling
+Stegosaurus
+Summer Drakeling
+Tapejara
+Terror Bird
+Therizinosaur
+Thylacoleo
+Titanoboa
+Titanomyrma Drone
+Titanosaur
+Triceratops
+Trilobite
+Troodon
+Tusoteuthis
+Unicorn
+Veilwyn
+Vulture
+Winter Drakeling
+Woolly Rhino
+Xiphactinus
+Yutyrannus

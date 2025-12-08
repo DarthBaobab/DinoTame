@@ -1,29 +1,68 @@
+Aberrant Carbonemys
+Aberrant Carnotaurus
+Aberrant Cnidaria
+Aberrant Coelacanth
+Aberrant Diplodocus
+Aberrant Dire Bear
+Aberrant Dodo
+Aberrant Doedicurus
+Aberrant Electrophorus
+Aberrant Equus
+Aberrant Gigantoraptor
+Aberrant Iguanodon
+Aberrant Lystrosaurus
+Aberrant Meganeura
+Aberrant Moschops
+Aberrant Otter
+Aberrant Oviraptor
+Aberrant Ovis
+Aberrant Paraceratherium
+Aberrant Parasaur
+Aberrant Piranha
+Aberrant Pulmonoscorpius
+Aberrant Raptor
+Aberrant Salmon
+Aberrant Sarco
+Aberrant Stegosaurus
+Aberrant Triceratops
 Achatina
 Allosaurus
 Ammonite
 Anglerfish
 Ankylosaurus
 Araneo
-Archaeopteryx
 Archelon
 Argentavis
 Arthropluera
-Autumn Drakeling
 Baryonyx
-Basilosaurus
 Beelzebufo
-Bison
 Brontosaurus
+Bulbdog
 Carbonemys
 Carcharodontosaurus
 Carnotaurus
 Castoroides
 Cat
+Cave Minotaur
 Ceratosaurus
 Chalicotherium
 Cnidaria
 Coelacanth
 Compy
+Corrupted Arthropluera
+Corrupted Carnotaurus
+Corrupted Chalicotherium
+Corrupted Dilophosaur
+Corrupted Paraceratherium
+Corrupted Pteranodon
+Corrupted Raptor
+Corrupted Reaper King
+Corrupted Rex
+Corrupted Rock Drake
+Corrupted Spino
+Corrupted Stegosaurus
+Corrupted Triceratops
+Cosmo
 Daeodon
 Deinosuchus
 Deinotherium
@@ -33,40 +72,43 @@ Dimorphodon
 Diplocaulus
 Diplodocus
 Dire Bear
-Dire Polar Bear
 Direwolf
 Dodo
 Doedicurus
 Dreadmare
+Dreadnoughtus
 Dung Beetle
 Dunkleosteus
 Electrophorus
 Equus
 Eurypterid
-Featherlight
+Fasolasuchus
+Gacha
 Gallimimus
+Gasbags
 Giant Queen Bee
 Giganotosaurus
 Gigantopithecus
-Griffin
+Gigantoraptor
 Hesperornis
 Hyaenodon
-Ice Wyvern
-Iceworm Male
 Ichthyornis
 Ichthyosaurus
 Iguanodon
-Jerboa
 Kairuku
 Kaprosuchus
 Karkinos
 Kentrosaurus
+Kirayli
 Leech
 Light Bug
 Liopleurodon
 Lystrosaurus
+Maeguana
 Mammoth
+Managarmr
 Manta
+Mantis
 Megalania
 Megaloceros
 Megalodon
@@ -78,6 +120,7 @@ Microraptor
 Morellatops
 Mosasaurus
 Moschops
+Oil Jug Bug
 Onyc
 Otter
 Oviraptor
@@ -90,39 +133,44 @@ Pegomastax
 Pelagornis
 Phiomia
 Piranha
-Plesiosaur
-Poison Wyvern
+Polar Bear
 Procoptodon
 Pteranodon
 Pulmonoscorpius
 Purlovia
+Pyromane
 Quetzal
 Raptor
+Ravager
 Rex
+Rhyniognatha
 Rock Elemental
+Roll Rat
+Rubble Golem
 Sabertooth
 Sabertooth Salmon
 Sarco
-Shinehorn
+Shastasaurus
+Snow Owl
 Spino
-Spring Drakeling
 Stegosaurus
-Summer Drakeling
 Tapejara
 Terror Bird
+Thanatos
 Therizinosaur
+Thorny Dragon
 Thylacoleo
 Titanoboa
 Titanomyrma Drone
-Titanosaur
 Triceratops
 Trilobite
 Troodon
 Tusoteuthis
 Unicorn
-Veilwyn
+Velonasaur
 Vulture
-Winter Drakeling
+Water Jug Bug
 Woolly Rhino
 Xiphactinus
+Yeti
 Yutyrannus

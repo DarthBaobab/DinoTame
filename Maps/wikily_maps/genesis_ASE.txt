@@ -1,129 +1,99 @@
-Achatina
-Allosaurus
 Ammonite
 Anglerfish
 Ankylosaurus
 Araneo
-Archelon
+Archaeopteryx
 Argentavis
 Arthropluera
+Astrocetus
+Attack Drone
 Baryonyx
-Basilosaurus
+Basilisk
 Beelzebufo
+Bloodstalker
 Brontosaurus
+Bulbdog
 Carbonemys
 Carnotaurus
 Castoroides
-Cave Minotaur
-Ceratosaurus
 Chalicotherium
 Cnidaria
 Coelacanth
-Compy
-Corrupted Arthropluera
-Corrupted Carnotaurus
-Corrupted Chalicotherium
-Corrupted Dilophosaur
-Corrupted Giganotosaurus
-Corrupted Paraceratherium
-Corrupted Pteranodon
-Corrupted Raptor
-Corrupted Rex
-Corrupted Rock Drake
-Corrupted Spino
-Corrupted Stegosaurus
-Corrupted Triceratops
 Daeodon
-Deinosuchus
+Defense Unit
 Dilophosaur
 Dimetrodon
 Dimorphodon
 Diplocaulus
-Diplodocus
 Dire Bear
 Direwolf
-Diseased Leech
 Dodo
 Doedicurus
-Dreadmare
-Dreadnoughtus
 Dung Beetle
-Dunkleosteus
 Electrophorus
 Equus
 Eurypterid
-Fasolasuchus
-Fire Wyvern
+Featherlight
+Ferox
 Gallimimus
 Gasbags
 Giant Queen Bee
-Giganotosaurus
 Gigantopithecus
-Gigantoraptor
+Glowbug
 Hesperornis
-Hyaenodon
 Ichthyornis
-Ichthyosaurus
 Iguanodon
+Insect Swarm
 Kairuku
 Kaprosuchus
+Karkinos
 Kentrosaurus
-King Titan
-Kirayli
+Lamprey
 Leech
 Leedsichthys
-Lightning Wyvern
-Liopleurodon
-Lymantria
 Lystrosaurus
-Maeguana
+Magmasaur
 Mammoth
 Manta
-Mantis
+Megachelon
 Megalania
 Megaloceros
-Megalodon
-Megalosaurus
 Meganeura
 Megatherium
 Mesopithecus
 Microraptor
-Morellatops
-Mosasaurus
 Moschops
 Oil Jug Bug
 Onyc
-Otter
 Oviraptor
 Ovis
-Pachy
 Pachyrhinosaurus
-Paraceratherium
+Parakeet Fish School
 Parasaur
 Pegomastax
 Pelagornis
 Phiomia
 Piranha
 Plesiosaur
-Poison Wyvern
+Polar Bear
 Procoptodon
 Pteranodon
 Pulmonoscorpius
 Purlovia
-Pyromane
-Quetzal
-Raptor
-Rex
-Rhyniognatha
+Ravager
 Rock Elemental
-Rubble Golem
-Sabertooth
+Roll Rat
 Sabertooth Salmon
 Sarco
-Shastasaurus
-Spino
+Seeker
+Shinehorn
 Stegosaurus
-Tapejara
+Surface Reaper King
+Tek Parasaur
+Tek Raptor
+Tek Rex
+Tek Stegosaurus
+Tek Triceratops
 Terror Bird
 Therizinosaur
 Thorny Dragon
@@ -131,14 +101,27 @@ Thylacoleo
 Titanoboa
 Titanomyrma Drone
 Titanomyrma Soldier
-Triceratops
 Trilobite
-Troodon
 Tusoteuthis
-Unicorn
-Velonasaur
-Vulture
 Water Jug Bug
-Woolly Rhino
-Xiphactinus
-Yutyrannus
+X-Allosaurus
+X-Ankylosaurus
+X-Argentavis
+X-Basilosaurus
+X-Dunkleosteus
+X-Ichthyosaurus
+X-Megalodon
+X-Mosasaurus
+X-Otter
+X-Paraceratherium
+X-Parasaur
+X-Raptor
+X-Rex
+X-Rock Elemental
+X-Sabertooth
+X-Sabertooth Salmon
+X-Spino
+X-Tapejara
+X-Triceratops
+X-Woolly Rhino
+X-Yutyrannus
