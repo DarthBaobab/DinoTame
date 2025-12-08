@@ -15,7 +15,7 @@ def to_number(token):
         return 0
     try:
         if '.' in t:
-            return int(round(float(t)))
+            return int(max(1, round(float(t))))
         return int(t)
     except:
         return 0

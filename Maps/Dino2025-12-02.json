@@ -44,7 +44,7 @@
             },
             "Damage": {
                 "Base": 1,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -212,7 +212,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -268,7 +268,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 800,
@@ -443,7 +443,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -502,7 +502,7 @@
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -2471,7 +2471,7 @@
             "Health": {
                 "Base": 70000,
                 "Wild": 56,
-                "Tame": 0
+                "Tame": 1
             },
             "Stamina": {
                 "Base": 480,
@@ -2480,7 +2480,7 @@
             },
             "Oxygen": {
                 "Base": 150,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Food": {
@@ -2501,7 +2501,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 6000,
@@ -2668,7 +2668,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -2838,7 +2838,7 @@
             },
             "Weight": {
                 "Base": 25,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 4
             },
             "Damage": {
@@ -2899,12 +2899,12 @@
             },
             "Weight": {
                 "Base": 8,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 0
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -2958,12 +2958,12 @@
             },
             "Weight": {
                 "Base": 25,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 4
             },
             "Damage": {
                 "Base": 4,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -3165,7 +3165,7 @@
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -4638,7 +4638,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -4698,7 +4698,7 @@
             },
             "Damage": {
                 "Base": 20,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 1
             },
             "Speed": {
@@ -5019,7 +5019,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5258,7 +5258,7 @@
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5523,7 +5523,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5577,7 +5577,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5631,7 +5631,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5685,7 +5685,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5767,7 +5767,7 @@
             "Health": {
                 "Base": 100000,
                 "Wild": 3200,
-                "Tame": 0
+                "Tame": 1
             },
             "Stamina": {
                 "Base": 300,
@@ -5847,12 +5847,12 @@
             },
             "Weight": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 8
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -5970,7 +5970,7 @@
             },
             "Damage": {
                 "Base": 3,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -6030,7 +6030,7 @@
             },
             "Damage": {
                 "Base": 9,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -6137,7 +6137,7 @@
             },
             "Damage": {
                 "Base": 3,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -6397,7 +6397,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 180,
@@ -6605,7 +6605,7 @@
             },
             "Damage": {
                 "Base": 8,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 3
             },
             "Speed": {
@@ -6658,7 +6658,7 @@
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -6720,7 +6720,7 @@
             },
             "Damage": {
                 "Base": 8,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -6755,16 +6755,16 @@
             "Health": {
                 "Base": 80000,
                 "Wild": 40,
-                "Tame": 0
+                "Tame": 1
             },
             "Stamina": {
                 "Base": 400,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 1
             },
             "Oxygen": {
                 "Base": 150,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Food": {
@@ -6785,7 +6785,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 10000,
@@ -7262,7 +7262,7 @@
             },
             "Damage": {
                 "Base": 1,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -7428,7 +7428,7 @@
             },
             "Damage": {
                 "Base": 1,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -7602,7 +7602,7 @@
             },
             "Damage": {
                 "Base": 3,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -7661,7 +7661,7 @@
             },
             "Damage": {
                 "Base": 8,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -7840,7 +7840,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -8220,7 +8220,7 @@
             },
             "Damage": {
                 "Base": 6,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -8380,7 +8380,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 725,
@@ -8493,7 +8493,7 @@
             "Speed": {
                 "Base": 150,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 800,
@@ -8865,7 +8865,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -9523,7 +9523,7 @@
             },
             "Damage": {
                 "Base": 8,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -9792,7 +9792,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 3000,
@@ -9898,7 +9898,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -9948,7 +9948,7 @@
             },
             "Damage": {
                 "Base": 4,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10117,7 +10117,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10388,7 +10388,7 @@
             },
             "Damage": {
                 "Base": 5,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10447,7 +10447,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10689,7 +10689,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10807,7 +10807,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -10920,7 +10920,7 @@
             "Speed": {
                 "Base": 100,
                 "Wild": 0,
-                "Tame": 0
+                "Tame": 1
             },
             "Torpor": {
                 "Base": 1600,
@@ -12192,7 +12192,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -12997,7 +12997,7 @@
             },
             "Damage": {
                 "Base": 10,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {
@@ -13057,7 +13057,7 @@
             },
             "Damage": {
                 "Base": 7,
-                "Wild": 0,
+                "Wild": 1,
                 "Tame": 2
             },
             "Speed": {

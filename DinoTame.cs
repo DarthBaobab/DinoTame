@@ -102,7 +102,7 @@ public class CPHInline : CPHInlineBase
     {
         public string user { get; set; }
         public string kibbleType { get; set; }
-        public string weapon { get; set; }
+        public KeyValuePair<string, WeaponStats> weapon { get; set; }
         public int weaponQuality { get; set; }
     }
     public class TameResult
@@ -683,7 +683,7 @@ public class CPHInline : CPHInlineBase
         }
         double weaponTypeChance = rnd.NextDouble();
         var weaponStats = weaponStatsTorpor;
-        if (weaponTypeChance < 0.1)
+        if (weaponTypeChance < 0.25)
         {
             weaponStats = weaponStatsNormal;
         }
@@ -692,16 +692,17 @@ public class CPHInline : CPHInlineBase
             weaponStats = weaponStatsTorpor;
         }
         int weaponId = rnd.Next(0, weaponStats.Count);
-        string weapon = weaponStats.Keys.ElementAt(weaponId);
+        var weapon = weaponStats.ElementAt(weaponId);
         
         // double x = rnd.NextDouble();
         // double scaled = x * x;        // quadratisch -> viele kleine Werte
         // int quality = (int)(100 + scaled * (755 - 100));
 
+        int maxQuality = 350;
         double x = rnd.NextDouble();
         double scaled = Math.Pow(x, 5); // kubisch -> noch mehr kleine Werte als x*x
-        int quality = (int)Math.Round(100 + scaled * (755 - 100));
-        quality = Math.Max(100, Math.Min(755, quality));
+        int quality = (int)Math.Round(100 + scaled * (maxQuality - 100));
+        quality = Math.Max(100, Math.Min(maxQuality, quality));
 
         tameEntries.Add(new TameEntry { user = user, kibbleType = input, weapon = weapon, weaponQuality = quality });
         // Kibble abziehen
@@ -758,13 +759,7 @@ public class CPHInline : CPHInlineBase
 
         foreach (var entry in tameEntries)
         {
-            if (!weaponStatsTorpor.TryGetValue(entry.weapon, out WeaponStats stats))
-            {
-                CPH.LogWarn($"[DinoTame] Ungültige Waffe von {entry.user}: {entry.weapon}");
-                continue;
-            }
-
-            durabilityLeft[entry.user] = stats.Durability;
+            durabilityLeft[entry.user] = entry.weapon.Value.Durability / tameEntries.Count;
         }
 
         // 🔁 Jetzt laufen wir Runden durch, bis KO oder tot
@@ -775,21 +770,17 @@ public class CPHInline : CPHInlineBase
             foreach (var entry in tameEntries)
             {
                 string user = entry.user;
-                string weapon = entry.weapon;
+                string weapon = entry.weapon.Key;
                 int weaponQuality = entry.weaponQuality;
 
                 // Wenn der User keine Haltbarkeit mehr hat → skip
                 if (durabilityLeft[user] <= 0)
                     continue;
 
-                // Waffe prüfen
-                if (!weaponStatsTorpor.TryGetValue(weapon, out WeaponStats stats))
-                    continue;
-
                 // Schaden + Torpor pro Schlag
                 double qualityMultiplier = weaponQuality / 100.0;
-                double damageDealt = stats.Damage * qualityMultiplier;
-                double torporDealt = stats.Torpor * qualityMultiplier;
+                double damageDealt = entry.weapon.Value.Damage * qualityMultiplier;
+                double torporDealt = entry.weapon.Value.Torpor * qualityMultiplier;
 
                 // Schlag ausführen
                 dinoHealth -= damageDealt;
@@ -823,48 +814,6 @@ public class CPHInline : CPHInlineBase
             }
         }
 
-        CPH.LogInfo("[DinoTame] Der Dino konnte nicht betäubt werden.");
-        return "none";
-    }
-    public string KnockOutDinoOld()
-    {
-        double dinoHealth = currentDino.Stats.Health.Base + (currentDino.Stats.Health.Wild * currentDinoLevel);
-        double dinoTorpor = currentDino.Stats.Torpor.Base + (currentDino.Stats.Torpor.Wild * currentDinoLevel);
-        foreach (var entry in tameEntries)
-        {
-            string user = entry.user;
-            string weapon = entry.weapon;
-            int weaponQuality = entry.weaponQuality;
-            if (!weaponStatsTorpor.TryGetValue(weapon, out WeaponStats stats))
-            {
-                CPH.LogWarn($"[DinoTame] Ungültige Waffe von {user}: {weapon}");
-                continue;
-            }
-            // Schaden und Betäubung basierend auf Waffenqualität skalieren
-            double qualityMultiplier = weaponQuality / 100.0; // Skalierung der Qualität (1.0 = 100, 7.55 = 755)
-            double damageDealt = stats.Damage * qualityMultiplier;
-            double torporDealt = stats.Torpor * qualityMultiplier;
-            double durability = stats.Durability;
-
-            while (dinoTorpor > 0 && dinoHealth > 0 && durability > 0)
-            {
-                dinoHealth -= damageDealt;
-                dinoTorpor -= torporDealt;
-                durability -= 1;
-
-                CPH.LogInfo($"[DinoTame] {user} trifft den Dino mit {weapon} (Qualität: {weaponQuality}) für {damageDealt:F1} Schaden und {torporDealt:F1} Betäubung. Verbleibende Gesundheit: {Math.Max(dinoHealth, 0):F1}, Verbleibende Betäubung: {Math.Max(dinoTorpor, 0):F1}, Verbleibende Haltbarkeit: {durability:F1}");
-            }
-            if (dinoHealth <= 0)
-            {
-                CPH.LogInfo($"[DinoTame] Der Dino wurde von {user} getötet.");
-                return "dead";
-            }
-            if (dinoTorpor <= 0)
-            {
-                CPH.LogInfo($"[DinoTame] Der Dino wurde von {user} betäubt.");
-                return "knockedOut";
-            }
-        }
         CPH.LogInfo("[DinoTame] Der Dino konnte nicht betäubt werden.");
         return "none";
     }
@@ -2192,7 +2141,10 @@ public class CPHInline : CPHInlineBase
             CPH.LogWarn("[DinoTame] Not enough fighters to start the Boss Arena fight.");
            // CPH.TryGetArg("fighterBossArenaNotEnoughFightersMessage", out message);
             CPH.SendMessage(messages.FighterBossArenaNotEnoughFightersMessage);
-            CPH.SetTwitchUserVar(fighters.First().Value.user, "dinoTame_egg_paste", CPH.GetTwitchUserVar<int>(fighters.First().Value.user, "dinoTame_egg_paste", true) + pot, true);
+            foreach (var fighter in fighters)
+            {
+                CPH.SetTwitchUserVar(fighter.Value.user, "dinoTame_egg_paste", CPH.GetTwitchUserVar<int>(fighter.Value.user, "dinoTame_egg_paste", true) + (pot / fighters.Count), true);
+            }
             clearFighters(300);
             return false;
         }
@@ -2239,7 +2191,7 @@ public class CPHInline : CPHInlineBase
                 var randomTarget = aliveBosses.ElementAt(randomIndex);
 
                 bool userCrit = false;
-                int dmg = fighter.damage * 10;
+                int dmg = fighter.damage * 5;
 
                 if (fighter.currentHealth <= 0)
                 {
@@ -2352,4 +2304,17 @@ public class CPHInline : CPHInlineBase
         }
         return true;
     }
+    public bool deleteUserDefaultKibble()
+    {
+        List<UserVariableValue<string>> userVarList = CPH.GetTwitchUsersVar<string>("dinoTame_kibble_type", true);
+
+        foreach (UserVariableValue<string> userVar in userVarList)
+        {
+            string user = userVar.UserName;
+            CPH.UnsetTwitchUserVar(user, "dinoTame_kibble_type", true);
+            CPH.LogInfo($"[DinoTame] Deleted default Kibble type for user: {user}");
+        }
+        return true;
+    }
+
 }
